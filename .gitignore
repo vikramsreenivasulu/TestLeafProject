@@ -1,0 +1,10 @@
+# Ignore node modules
+.settings/
+target/
+test-output/
+.project
+.classpath
+
+# Ignore system files
+.DS_Store
+Thumbs.db
