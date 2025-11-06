@@ -1,0 +1,86 @@
+package LeafTestCases;
+
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+import LeafAction.BrowserMethods;
+import Utility.BaseClass;
+
+public class BrowserTestCases {
+
+	
+	public BrowserMethods browsermethods;
+	
+	@BeforeSuite
+	public void BeforeSuit() {
+		BaseClass.startdriver();
+		browsermethods = new BrowserMethods();
+		
+	}
+		
+		@Test
+		public void Attest() throws InterruptedException {
+			
+			browsermethods.browsermethod.Browser();
+			BaseClass.Sleep();
+			//Alert
+			browsermethods.alerts.Alert();
+			BaseClass.Sleep();
+			browsermethods.alerts.SimpleAlert();
+			BaseClass.Sleep();
+			browsermethods.alerts.SimplegetAlert();
+			browsermethods.alerts.PromptAlert();
+			BaseClass.Sleep();
+			browsermethods.alerts.PromptgetAlert();
+			BaseClass.Sleep();
+			browsermethods.alerts.ConfirmAlert();
+			BaseClass.Sleep();
+			browsermethods.alerts.ConfirmgetAlert();
+			BaseClass.Sleep();
+			browsermethods.alerts.SweetAlertConfirm();
+			BaseClass.Sleep();
+			browsermethods.alerts.SweetAltgetConfirm();  
+			BaseClass.Sleep();
+			browsermethods.alerts.SweetAlertSimple();
+			BaseClass.Sleep();
+			browsermethods.alerts.SweetAltgetSimple();
+			BaseClass.Sleep();			
+			browsermethods.alerts.SweetModal();
+			BaseClass.Sleep();
+			browsermethods.alerts.SweetModalClose();
+			BaseClass.Sleep();
+			browsermethods.alerts.MaxMin();
+			BaseClass.Sleep();
+			browsermethods.alerts.MaxMinMinimize();
+			BaseClass.Sleep();
+			BaseClass.Sleep();
+			browsermethods.alerts.MaxMinMaximize();
+			BaseClass.Sleep();
+			BaseClass.Sleep();
+			browsermethods.alerts.MaxMinClose();
+			System.out.println("it is working");
+			
+		}
+		
+		
+		@Test
+		public void Attest1() throws InterruptedException{
+			browsermethods.browsermethod.Browser();
+			BaseClass.Sleep();
+			//Frame
+			browsermethods.frames.ClickFrame();
+			BaseClass.Sleep();
+			browsermethods.frames.switchToInsideFrame();
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+	}
+
