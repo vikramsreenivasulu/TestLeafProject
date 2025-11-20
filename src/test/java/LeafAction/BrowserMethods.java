@@ -2,7 +2,10 @@ package LeafAction;
 
 import LeafLocators.BrowserLocators;
 import Utility.BaseClass;
+
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+
 
 public class BrowserMethods {
 
@@ -13,15 +16,22 @@ public class BrowserMethods {
 	
 	public Frames frames;
 	
+	public Window window;
+	
+	public Drag drag;
 	public BrowserLocators browserlocators = new BrowserLocators();
-	public BrowserMethods() {
+	public BrowserMethods() 
+	{
 		
 		browsermethod = new BrowserMethod();
 		alerts		= new Alerts();
 		frames     =  new Frames();
+		window     =  new Window();
+		drag 		= 	new Drag();
 	}
 	
-	public class BrowserMethod{
+	public class BrowserMethod
+	{
 		
 		public void Browser() throws InterruptedException 
 		{
@@ -112,9 +122,10 @@ public class BrowserMethods {
 		public void MaxMinClose() {
 			browserlocators.alerts.MaxMinClose.click();
 		}
-	}
+	}//alerts
 	
-	public class Frames {
+	public class Frames 
+	{
 		
 		public void ClickFrame() {
 			browserlocators.frame.ClickFrame.click();
@@ -126,5 +137,83 @@ public class BrowserMethods {
 			BaseClass.driver.switchTo().defaultContent();
 			
 		}
+		
+		public void switchtoNestedframe() {
+			BaseClass.driver.switchTo().frame(browserlocators.frame.NestedFrame);
+			BaseClass.driver.switchTo().frame(browserlocators.frame.NestedinsideFrame);
+			browserlocators.frame.NestedinsideFrameButton.click();
+			BaseClass.driver.switchTo().defaultContent();
+		}
+		
+	}//frames
+	
+	public class Window
+	{
+		public void ClickWindow() {
+			browserlocators.window.ClickWindow.click();
+		}
+		
+		public void Open() {
+			String window = BaseClass.getParentWindow();
+			browserlocators.window.Open.click();
+			BaseClass.switchToNewWindow(window);
+			browserlocators.window.Openwindownew.click();
+			BaseClass.switchToParentWindow(window);     //back to window	
+		}
+		
+		public void OpenMultiple() {
+			
+		}
 	}
-}
+		
+		
+	public class Drag{
+		
+		public void ClickDrag() {
+			browserlocators.drag.ClickDrag.click();
+		}
+		
+		public void DragOnly() {
+			WebElement src = browserlocators.drag.DragmeOne;
+			Actions a = new Actions(BaseClass.driver);
+			a.dragAndDropBy(src, 200, 0).perform();
+			a.dragAndDropBy(src, -200, 0).perform();
+		}
+		public void DragandDrop() {
+			//browserlocators.drag.DragmeTwo
+	        WebElement src = browserlocators.drag.DragmeTwo;
+	        WebElement target = browserlocators.drag.DragDropTwo;
+	        Actions a = new Actions(BaseClass.driver);
+	        a.dragAndDrop(src, target).perform();
+	       
+		}
+		
+		
+		
+		
+	}// drag closing para
+	
+	
+	
+	
+}//BrowserMethods end
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

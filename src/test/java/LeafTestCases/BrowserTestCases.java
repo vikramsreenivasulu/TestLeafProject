@@ -22,6 +22,7 @@ public class BrowserTestCases {
 		public void Attest() throws InterruptedException {
 			
 			browsermethods.browsermethod.Browser();
+			
 			BaseClass.Sleep();
 			//Alert
 			browsermethods.alerts.Alert();
@@ -71,12 +72,34 @@ public class BrowserTestCases {
 			browsermethods.frames.ClickFrame();
 			BaseClass.Sleep();
 			browsermethods.frames.switchToInsideFrame();
-			
-			
-			
+			BaseClass.Sleep();
+			browsermethods.frames.switchtoNestedframe();
+		}
+		
+		@Test
+		public void Attest2() throws InterruptedException {
+			BaseClass.Sleep();
+			browsermethods.browsermethod.Browser();
+			BaseClass.Sleep();
+			browsermethods.window.ClickWindow();
+			BaseClass.Sleep();
+			browsermethods.window.Open();
+			BaseClass.Sleep();
 			
 		}
 		
+		@Test
+		public void Attest3() throws InterruptedException {
+			BaseClass.Sleep();
+			browsermethods.browsermethod.Browser();
+			BaseClass.Sleep();
+			browsermethods.drag.ClickDrag();
+			BaseClass.Sleep();
+			browsermethods.drag.DragOnly();
+			BaseClass.Sleep();
+			browsermethods.drag.DragandDrop();
+			
+		}
 		
 		
 		

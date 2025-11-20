@@ -13,11 +13,16 @@ public class BrowserLocators {
 	public  Alerts alerts;
 	public Frame frame;
 	
+	public Window window;
+	
+	public Drag drag;
 	public BrowserLocators(){
 		
 		browserlocator = new BrowserLocator();
 		alerts      =  new Alerts();
 		frame		= new Frame();
+		window = 	new Window();
+		drag =  new Drag();
 	}
 	
 	public class BrowserLocator{
@@ -95,20 +100,60 @@ public class BrowserLocators {
 		@FindBy(xpath = "//button[@id='Click']")
 		public WebElement InsideFrameButton;
 		
+		@FindBy(xpath = "//iframe[@src='page.xhtml']")
+		public WebElement NestedFrame;
 		
+		@FindBy(id = "frame2")
+		public WebElement NestedinsideFrame;
 		
-		//frame close
-	}
+		@FindBy(id = "Click")
+		public WebElement NestedinsideFrameButton;
+	}// frames close
 	
-		
+		public class Window{
+			
+			public Window() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath = "//li[@id='menuform:m_window']//a[1]")
+			 public WebElement ClickWindow;
+			
+			@FindBy(xpath = "(//span[@class='ui-button-text ui-c'])[1]")
+			 public WebElement Open;
+			
+			@FindBy(xpath = "(//li[@id='menuform:j_idt40']//a)[1]")
+			 public WebElement Openwindownew;
+			
+			@FindBy(xpath = "(//span[@class='ui-button-text ui-c'])[2]")
+			 public WebElement OpenMultiple;
+			
+		}// window closing para
+	
+	
+		public class Drag{
+			public Drag() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath = "//li[@id='menuform:m_drag']//a[1]")
+			public WebElement ClickDrag;
+			
+			@FindBy(id = "form:conpnl")
+			public WebElement DragmeOne;
+			
+			@FindBy(id = "form:drag_content")
+			public WebElement DragmeTwo;
+			
+			@FindBy(xpath = "//p[normalize-space(text())='Drop here']")
+			public WebElement DragDropTwo;
+			
+			} // drag closing para
 	
 	
 	
 	
 	
 	
-	
-	
-	
-//main close para
-}
+
+} //main close para

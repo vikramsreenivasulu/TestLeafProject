@@ -27,7 +27,7 @@ public class BaseClass {
 			
 		}
 	
-		
+		//toasted msg
 		public static ChromeOptions getChromeOptions() 
 		{
 			
