@@ -3,6 +3,8 @@ package LeafAction;
 import LeafLocators.BrowserLocators;
 import Utility.BaseClass;
 
+import java.util.Set;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
@@ -69,8 +71,8 @@ public class BrowserMethods {
 		public void PromptgetAlert() {
 			Alert alert = BaseClass.driver.switchTo().alert();
 			alert.sendKeys("kdbcdjhbc");
-//			String alertText = alert.getText();
-//			System.out.println(alertText);
+			String alertText = alert.getText();
+			System.out.println(alertText);
 			alert.accept();
 		}
 		public void ConfirmAlert() {
@@ -153,19 +155,79 @@ public class BrowserMethods {
 			browserlocators.window.ClickWindow.click();
 		}
 		
-		public void Open() {
+		public void Open() throws InterruptedException {
 			String window = BaseClass.getParentWindow();
 			browserlocators.window.Open.click();
 			BaseClass.switchToNewWindow(window);
 			browserlocators.window.Openwindownew.click();
+			BaseClass.Sleep();
 			BaseClass.switchToParentWindow(window);     //back to window	
 		}
 		
-		public void OpenMultiple() {
+		public void OpenMultiple() throws InterruptedException {
+			String window = BaseClass.getParentWindow();
+			browserlocators.window.OpenMultiple.click();
+			int NoofWindow = BaseClass.driver.getWindowHandles().size();
+			System.out.println("no of windows"+NoofWindow);
 			
+			 Set<String> allWindows = BaseClass.driver.getWindowHandles();
+
+			for (String  Win : allWindows) 
+			{
+				if(!Win.equals(window))
+				{
+					BaseClass.driver.switchTo().window(Win);
+					BaseClass.driver.close();
+				}
+			}
+			BaseClass.switchToParentWindow(window);
+			}
+//			BaseClass.switchToNewWindowContains(window);
+//			BaseClass.driver.close();
+//			BaseClass.Sleep();
+//			BaseClass.switchToParentWindow(window);
+//			BaseClass.switchToNewWindow(window);
+//			BaseClass.driver.close();
+//			BaseClass.switchToNewWindow(window);
+//			BaseClass.driver.close();
+//			
+//		}
+		public void CloseWindows() throws InterruptedException 
+		{
+			String window = BaseClass.driver.getWindowHandle();
+			browserlocators.window.CloseWindows.click();
+			
+			Set<String> CloseNewOpenWindows = BaseClass.driver.getWindowHandles();
+			for (String Win : CloseNewOpenWindows) 
+			{
+				if(!Win.equals(window)) 
+				{
+					BaseClass.driver.switchTo().window(Win);
+					BaseClass.driver.close();
+				}
+				//BaseClass.Sleep();
+				
+			}
+			BaseClass.switchToParentWindow(window);
 		}
-	}
 		
+		public void OpenWithDelay() {
+			String Window = BaseClass.driver.getWindowHandle();
+			browserlocators.window.OpenWithDelay.click();
+			
+			Set<String> CloseNewOpenWindows = BaseClass.driver.getWindowHandles();
+			for (String Win : CloseNewOpenWindows) {
+				if(!Win.equals(Window)) {
+					BaseClass.driver.switchTo().window(Win);
+					BaseClass.driver.close();
+				}
+				
+			}
+			BaseClass.switchToParentWindow(Window);
+		}
+		
+	}//Closing window para
+	
 		
 	public class Drag{
 		

@@ -18,7 +18,7 @@ public class BrowserTestCases {
 		
 	}
 		
-		@Test
+		@Test					//Alerts
 		public void Attest() throws InterruptedException {
 			
 			browsermethods.browsermethod.Browser();
@@ -64,7 +64,7 @@ public class BrowserTestCases {
 		}
 		
 		
-		@Test
+		@Test						//Iframes	
 		public void Attest1() throws InterruptedException{
 			browsermethods.browsermethod.Browser();
 			BaseClass.Sleep();
@@ -76,19 +76,28 @@ public class BrowserTestCases {
 			browsermethods.frames.switchtoNestedframe();
 		}
 		
-		@Test
+		@Test			//Browser or Window Handlings
 		public void Attest2() throws InterruptedException {
 			BaseClass.Sleep();
 			browsermethods.browsermethod.Browser();
 			BaseClass.Sleep();
 			browsermethods.window.ClickWindow();
 			BaseClass.Sleep();
+			BaseClass.Sleep();
 			browsermethods.window.Open();
 			BaseClass.Sleep();
+			BaseClass.Sleep();
+			browsermethods.window.OpenMultiple();
+			BaseClass.Sleep();
+			BaseClass.Sleep();
+			browsermethods.window.CloseWindows();
+			BaseClass.Sleep();
+			browsermethods.window.OpenWithDelay();
 			
 		}
 		
-		@Test
+		
+		@Test				//Drag and Drop
 		public void Attest3() throws InterruptedException {
 			BaseClass.Sleep();
 			browsermethods.browsermethod.Browser();

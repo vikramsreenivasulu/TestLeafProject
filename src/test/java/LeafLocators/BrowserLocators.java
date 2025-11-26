@@ -128,6 +128,12 @@ public class BrowserLocators {
 			@FindBy(xpath = "(//span[@class='ui-button-text ui-c'])[2]")
 			 public WebElement OpenMultiple;
 			
+			@FindBy(xpath ="//span[normalize-space(text())='Close Windows']")
+			public WebElement CloseWindows;
+			
+			@FindBy(xpath ="//span[normalize-space(text())='Open with delay']")
+			public WebElement OpenWithDelay;
+			
 		}// window closing para
 	
 	
@@ -147,6 +153,8 @@ public class BrowserLocators {
 			
 			@FindBy(xpath = "//p[normalize-space(text())='Drop here']")
 			public WebElement DragDropTwo;
+			
+			
 			
 			} // drag closing para
 	

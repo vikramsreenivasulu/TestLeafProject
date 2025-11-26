@@ -23,9 +23,27 @@ public ElementMethods elementmethods;
 		
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
-		//testbox
+		//DropDown
 		BaseClass.Sleep();
-		elementmethods.textbox.ClickTextBox();
+		elementmethods.dropdown.ClickDropDown();
+		BaseClass.Sleep();
+		elementmethods.dropdown.UIAuto();
+		BaseClass.Sleep();
+		elementmethods.dropdown.Country("India");
+		BaseClass.Sleep();
+		elementmethods.dropdown.City("Chennai");
+		BaseClass.Sleep();
+		elementmethods.dropdown.Course("Appium");
+		BaseClass.Sleep();
+		elementmethods.dropdown.Course("AWS");
+		BaseClass.Sleep();
+		elementmethods.dropdown.Course("JMeter");
+		BaseClass.Sleep();
+		elementmethods.dropdown.Language("English");
+		BaseClass.Sleep();
+		elementmethods.dropdown.LanguageChoosen("Two");
+		BaseClass.Sleep();
+		
 	}
 	
 	

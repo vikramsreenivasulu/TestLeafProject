@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -70,8 +72,10 @@ public class BaseClass {
 
 		        for (String handle : allWindows) {
 		            if (!handle.equals(window)) {
+		            	
 		                driver.switchTo().window(handle);
 		                break;
+		            	
 		            }
 		        }
 
@@ -81,4 +85,45 @@ public class BaseClass {
 			   driver.switchTo().window(window);
 			   
 		}
+		
+		public static void switchToNewWindowContains(String window) 
+		{
+
+			Set<String> allWindows = driver.getWindowHandles();
+
+			for (String handle : allWindows) 
+			{
+				if (!handle.equals(window)) 
+				{
+
+					driver.switchTo().window(handle);
+					if (!driver.getCurrentUrl().contains("input")) 
+					{
+
+						driver.close();
+						break;
+					}
+
+				}
+			}
+
+		} //switchToNewWindowContains
+		
+		public static void selectDropdown(WebElement dropdown, String value) throws InterruptedException {
+		    dropdown.click();
+		    BaseClass.Sleep();
+		    BaseClass.Sleep();
+		    WebElement element = driver.findElement(By.xpath("//li[@data-label='" + value + "']"));
+		    element.click();
+		}  // closing selectDropdown 
+		
+		
+		public static void selectCourseDropdown(WebElement dropdown, String value) throws InterruptedException {
+		    dropdown.click();
+		    BaseClass.Sleep();
+		    BaseClass.Sleep();
+		    WebElement element = driver.findElement(By.xpath("//li[@data-item-label='" + value + "']"));
+		    element.click();
+		}   //Closing selectCourseDropdown    
+		
 }
