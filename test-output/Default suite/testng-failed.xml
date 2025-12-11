@@ -6,7 +6,7 @@
       <class name="LeafTestCases.ElementTestClases">
         <methods>
           <include name="BeforeSuit"/>
-          <include name="Attest"/>
+          <include name="RadioBttn"/>
         </methods>
       </class> <!-- LeafTestCases.ElementTestClases -->
     </classes>

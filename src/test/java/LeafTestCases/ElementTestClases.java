@@ -43,11 +43,44 @@ public ElementMethods elementmethods;
 		BaseClass.Sleep();
 		elementmethods.dropdown.LanguageChoosen("Two");
 		BaseClass.Sleep();
-		
 	}
 	
 	
+
+	@Test
+	public void WaitsAtTest() throws InterruptedException {
+		
+		elementmethods.elementmethod.ClickElement();
+		BaseClass.Sleep();
+		elementmethods.waits.Clickwaits();
+		BaseClass.Sleep();
+		elementmethods.waits.WaitforVisibility();
+		BaseClass.Sleep();
+		elementmethods.waits.WaitforClickability();
+		BaseClass.Sleep();
+		elementmethods.waits.ClickSecondBtn();
+		BaseClass.Sleep();
+		elementmethods.waits.WaitforInvisibility();
+		BaseClass.Sleep();
+		elementmethods.waits.WaitforTextChange();
+	}
 	
 	
+	@Test
+	public void RadioBttn() throws InterruptedException {
+		
+		BaseClass.Sleep();
+		elementmethods.elementmethod.ClickElement();
+		BaseClass.Sleep();
+		elementmethods.radiobttns.ClickRadioBttn();
+		BaseClass.Sleep();
+		elementmethods.radiobttns.ChromeBrowser();
+		BaseClass.Sleep();
+		elementmethods.radiobttns.defaultBttn();
+		BaseClass.Sleep();
+		elementmethods.radiobttns.UnSelected();
+		BaseClass.Sleep();
+		elementmethods.radiobttns.SelectAgeGrp();
+	}
 	
 }
