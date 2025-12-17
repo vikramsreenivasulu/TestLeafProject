@@ -42,6 +42,8 @@ public ElementMethods elementmethods;
 		elementmethods.dropdown.Language("English");
 		BaseClass.Sleep();
 		elementmethods.dropdown.LanguageChoosen("Two");
+		
+		BaseClass.TakeScreenshot("Sample");
 		BaseClass.Sleep();
 	}
 	
@@ -66,8 +68,9 @@ public ElementMethods elementmethods;
 	}
 	
 	
-	@Test
-	public void RadioBttn() throws InterruptedException {
+	@Test()
+	public void RadioBttn() throws InterruptedException 
+	{
 		
 		BaseClass.Sleep();
 		elementmethods.elementmethod.ClickElement();
