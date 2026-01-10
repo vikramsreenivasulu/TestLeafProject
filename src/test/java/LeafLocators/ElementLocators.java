@@ -11,6 +11,7 @@ public class ElementLocators {
 	public ElementLocator elementlocator;
 	public DropDowns dropdowns;
 	public Waits waits;
+	public TextBox textbox;
 	
 	public RadioBttns radiobttns;
 	
@@ -20,6 +21,8 @@ public class ElementLocators {
 			dropdowns = new DropDowns();
 			waits = new Waits();
 			radiobttns = new RadioBttns();
+			textbox = new TextBox();
+			
 		}
 		
 		
@@ -112,4 +115,20 @@ public class ElementLocators {
 			public WebElement SelectAgeGrp;
 			
 		}// closing RadioBttns
+		
+		public class  TextBox{
+			
+			public TextBox() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath = "//li[@id='menuform:m_input']//a[1]")
+			public WebElement ClickTextBox;
+			
+			@FindBy(id="j_idt88:name")
+			public WebElement TypeName;
+			
+			@FindBy()
+			public WebElement ErroMsg;
+		}
 }

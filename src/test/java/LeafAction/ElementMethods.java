@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 //import org.openqa.selenium.support.ui.Select;
 
 import LeafLocators.ElementLocators;
+import LeafLocators.ElementLocators.TextBox;
 import Utility.BaseClass;
 
 public class ElementMethods {
@@ -21,6 +22,7 @@ public class ElementMethods {
 		public Waits waits;
 		
 		public RadioBttns radiobttns;
+		public TextBox textbox;
 		
 		 public ElementLocators elementlocators = new ElementLocators();
 		
@@ -30,6 +32,7 @@ public class ElementMethods {
 			dropdown = new DropDown();
 			waits = new Waits();
 			radiobttns = new RadioBttns();
+			textbox = new TextBox();
 		}
 	
 		public class ElementMethod{
@@ -180,8 +183,21 @@ public class ElementMethods {
 					System.out.println("**Safari button is not selected**");
 				}
 			}
-			
-			
-			
 		}// closing RadioBttns
+		
+			public class TextBox{
+				
+				public void Clicktextbox() {
+					elementlocators.textbox.ClickTextBox.click();
+				}
+				
+				public void TypeName(String typename) {
+					elementlocators.textbox.TypeName.sendKeys(typename);
+				}
+				
+				
+			}//Closing TextBox
+			
+			
+		
 }

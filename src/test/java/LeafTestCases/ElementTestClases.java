@@ -18,7 +18,7 @@ public ElementMethods elementmethods;
 	}
 	
 	
-	@Test
+	@Test()
 	public void Attest() throws InterruptedException {
 		
 		elementmethods.elementmethod.ClickElement();
@@ -86,4 +86,16 @@ public ElementMethods elementmethods;
 		elementmethods.radiobttns.SelectAgeGrp();
 	}
 	
+	
+	@Test()
+	public void TextBox() throws InterruptedException 
+	{
+		
+		BaseClass.Sleep();
+		elementmethods.elementmethod.ClickElement();
+		BaseClass.Sleep();
+		elementmethods.textbox.Clicktextbox();
+		BaseClass.Sleep();
+		elementmethods.textbox.TypeName("vikram sreenivas");
+	}
 }
