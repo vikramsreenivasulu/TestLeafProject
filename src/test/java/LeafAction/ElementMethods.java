@@ -195,6 +195,16 @@ public class ElementMethods {
 					elementlocators.textbox.TypeName.sendKeys(typename);
 				}
 				
+				public void ErroMsg(String ErroMsg){
+					elementlocators.textbox.ErroMsg.sendKeys(ErroMsg);
+					elementlocators.textbox.ErroMsg.click();
+				}
+				
+				public void AppendCity(String City) {
+					elementlocators.textbox.AppendCity.clear();
+					elementlocators.textbox.AppendCity.sendKeys(City);
+				}
+				
 				
 			}//Closing TextBox
 			

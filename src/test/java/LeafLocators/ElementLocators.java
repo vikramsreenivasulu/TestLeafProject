@@ -128,7 +128,10 @@ public class ElementLocators {
 			@FindBy(id="j_idt88:name")
 			public WebElement TypeName;
 			
-			@FindBy()
-			public WebElement ErroMsg;
+			@FindBy(id = "j_idt106:thisform:age")
+			public WebElement ErroMsg;  
+			
+			@FindBy(id = "j_idt88:j_idt91")
+			public WebElement AppendCity; 
 		}
 }

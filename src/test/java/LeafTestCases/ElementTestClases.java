@@ -97,5 +97,10 @@ public ElementMethods elementmethods;
 		elementmethods.textbox.Clicktextbox();
 		BaseClass.Sleep();
 		elementmethods.textbox.TypeName("vikram sreenivas");
+		BaseClass.Sleep();
+		elementmethods.textbox.ErroMsg("");
+		BaseClass.Sleep();
+		elementmethods.textbox.AppendCity("Banglore");
+		BaseClass.Sleep();
 	}
 }
