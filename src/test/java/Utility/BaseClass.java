@@ -160,8 +160,10 @@ public class BaseClass {
 		SimpleDateFormat dateStrCurrent = new SimpleDateFormat(format);
 		return dateStrCurrent.format(date);
 
+	} // closing getCurrentDate
+	
+	public static void stoptdriver() {
+		driver.quit();
 	}
-	
-	
 	
 }

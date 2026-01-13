@@ -1,9 +1,12 @@
 package LeafAction;
 
+import java.awt.Desktop.Action;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -195,9 +198,12 @@ public class ElementMethods {
 					elementlocators.textbox.TypeName.sendKeys(typename);
 				}
 				
-				public void ErroMsg(String ErroMsg){
-					elementlocators.textbox.ErroMsg.sendKeys(ErroMsg);
-					elementlocators.textbox.ErroMsg.click();
+				public void ErroMsg(){
+//					Actions a = new Actions(BaseClass.driver);
+//					 a.click(ErroMsg).build().perform();
+					elementlocators.textbox.ErroMsg.sendKeys(Keys.ENTER);		
+							
+					
 				}
 				
 				public void AppendCity(String City) {
@@ -205,6 +211,30 @@ public class ElementMethods {
 					elementlocators.textbox.AppendCity.sendKeys(City);
 				}
 				
+				@SuppressWarnings("null")
+				public void PositionChanged() {
+					
+					elementlocators.textbox.PositionChange.click();
+					
+					String username = "";
+							if(username.equals(null)){
+								System.out.println("username positon was changed ");
+							}
+							else{
+								System.out.println("username position was not changed");
+							}
+				}
+				
+				public void textboxdisabled() {
+					
+					boolean status = elementlocators.textbox.textboxdisabled.isEnabled();
+					
+					if(status != true) {
+						System.out.println("it is disabled");
+					}else {
+						System.out.println("it is enabled");
+					}
+				}
 				
 			}//Closing TextBox
 			

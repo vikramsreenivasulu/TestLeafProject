@@ -1,5 +1,6 @@
 package LeafTestCases;
 
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -98,9 +99,19 @@ public ElementMethods elementmethods;
 		BaseClass.Sleep();
 		elementmethods.textbox.TypeName("vikram sreenivas");
 		BaseClass.Sleep();
-		elementmethods.textbox.ErroMsg("");
+		elementmethods.textbox.ErroMsg();
 		BaseClass.Sleep();
 		elementmethods.textbox.AppendCity("Banglore");
 		BaseClass.Sleep();
+		elementmethods.textbox.PositionChanged();
+		BaseClass.Sleep();
+		elementmethods.textbox.textboxdisabled();
+	}
+	
+	
+	@AfterSuite
+	public void AfterSuite() {
+		BaseClass.stoptdriver();
+		
 	}
 }

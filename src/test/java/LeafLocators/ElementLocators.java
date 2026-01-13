@@ -1,5 +1,6 @@
 package LeafLocators;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -133,5 +134,11 @@ public class ElementLocators {
 			
 			@FindBy(id = "j_idt88:j_idt91")
 			public WebElement AppendCity; 
+			
+			@FindBy(id="j_idt106:float-input")
+			public WebElement PositionChange;
+			
+			@FindBy(id="j_idt88:j_idt93")
+			public WebElement textboxdisabled;
 		}
 }
