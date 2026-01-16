@@ -211,13 +211,12 @@ public class ElementMethods {
 					elementlocators.textbox.AppendCity.sendKeys(City);
 				}
 				
-				@SuppressWarnings("null")
 				public void PositionChanged() {
 					
 					elementlocators.textbox.PositionChange.click();
 					
 					String username = "";
-							if(username.equals(null)){
+							if(username.equals("")){
 								System.out.println("username positon was changed ");
 							}
 							else{
@@ -235,6 +234,54 @@ public class ElementMethods {
 						System.out.println("it is enabled");
 					}
 				}
+				
+				/*
+				 * public void ChoosethirdOpt(String name ) throws InterruptedException {
+				 * 
+				 * elementlocators.textbox.ChoosethirdOpt.sendKeys(name); }
+				 */
+				
+				public void ClearText() {
+					elementlocators.textbox.ClearText.clear();
+				}
+				
+				public void DOBChoosen(String DOB) {
+					
+					elementlocators.textbox.DOBChoosen.sendKeys(DOB,Keys.ENTER);
+					System.out.println(DOB);
+					String  Birth = "10/16/2000";
+					if(Birth==DOB) {
+						System.out.println("Given DOB is printed");
+					}else {
+					System.out.println("Given DOB is not printed");
+					}
+				}
+				
+				public void Retrieve() {
+					
+					String Text = elementlocators.textbox.Retrieve.getAttribute("Value");
+					System.out.println("Retrieve text: "+Text);
+					String Value = "My learning is superb so far.";
+					if(Text != Value) {
+						System.out.println("Retrieved Value is same ");
+					}else {
+						System.out.println("Retrieved Value is not same ");
+					}
+				}
+				
+				public void TypeMail(String Mail) {
+					elementlocators.textbox.TypeMail.sendKeys(Mail);
+				}
+				
+				public void Abouturself(String About) {
+					elementlocators.textbox.Abouturself.sendKeys(About);
+				}
+				
+				public void SliderMove(String Num) {
+					elementlocators.textbox.SliderMove.sendKeys(Num);
+					
+				}
+				
 				
 			}//Closing TextBox
 			

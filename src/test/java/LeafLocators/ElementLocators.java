@@ -140,5 +140,32 @@ public class ElementLocators {
 			
 			@FindBy(id="j_idt88:j_idt93")
 			public WebElement textboxdisabled;
+			
+			/*
+			 * @FindBy(xpath =
+			 * "//ul[contains(@class,'ui-autocomplete-multiple-container ui-autocomplete-dd-multiple-container')]"
+			 * ) public WebElement ChoosethirdOpt;
+			 */
+			
+			
+			@FindBy(id = "j_idt88:j_idt95")
+			public WebElement ClearText;
+			
+			@FindBy(id = "j_idt106:j_idt116_input")
+			public WebElement DOBChoosen;
+			
+			@FindBy(id="j_idt88:j_idt97")
+			public WebElement Retrieve;
+			
+			@FindBy(id="j_idt88:j_idt99")
+			public WebElement TypeMail;
+			
+			@FindBy(id="j_idt88:j_idt101")
+			public WebElement Abouturself;
+			
+			@FindBy(id="j_idt106:slider")
+			public WebElement SliderMove;
+			
+			
 		}
 }
