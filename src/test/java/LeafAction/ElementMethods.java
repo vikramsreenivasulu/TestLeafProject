@@ -4,6 +4,7 @@ import java.awt.Desktop.Action;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -235,11 +236,37 @@ public class ElementMethods {
 					}
 				}
 				
-				/*
-				 * public void ChoosethirdOpt(String name ) throws InterruptedException {
-				 * 
-				 * elementlocators.textbox.ChoosethirdOpt.sendKeys(name); }
-				 */
+				
+//				 public void ChoosethirdOpt(String name ) throws InterruptedException{
+//					 
+//					 //elementlocators.textbox.ChoosethirdOpt.sendKeys(name); 
+//					 
+//					 JavascriptExecutor ChoosethirdOpt =  (JavascriptExecutor) BaseClass.driver;
+//					 ChoosethirdOpt.executeScript("arguments[0].sendKeys(name)", ChoosethirdOpt);
+//					 
+//				 }
+				 
+				public void chooseThirdOpt(String name) {
+
+					
+					elementlocators.textbox.ChoosethirdOpt.sendKeys(name);
+					
+//				    WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+//				    WebElement ele = wait.until(
+//				        ExpectedConditions.elementToBeClickable(
+//				            
+//				        )
+//				    );
+//
+//				    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+//				    //js.executeScript("arguments[0].scrollIntoView(true);", ele);
+//				    //js.executeScript("arguments[0].click();", ele);
+//				    js.executeScript("arguments[0].value='name';", ele);
+//
+//				    //ele.clear();      // optional
+//				    //ele.sendKeys(name);
+				}
+
 				
 				public void ClearText() {
 					elementlocators.textbox.ClearText.clear();

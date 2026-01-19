@@ -141,11 +141,10 @@ public class ElementLocators {
 			@FindBy(id="j_idt88:j_idt93")
 			public WebElement textboxdisabled;
 			
-			/*
-			 * @FindBy(xpath =
-			 * "//ul[contains(@class,'ui-autocomplete-multiple-container ui-autocomplete-dd-multiple-container')]"
-			 * ) public WebElement ChoosethirdOpt;
-			 */
+			
+			 @FindBy(xpath ="j_idt106:auto-complete_input")
+			 public WebElement ChoosethirdOpt;
+			 
 			
 			
 			@FindBy(id = "j_idt88:j_idt95")

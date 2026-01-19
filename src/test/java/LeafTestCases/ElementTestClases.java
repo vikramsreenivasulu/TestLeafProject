@@ -107,19 +107,19 @@ public ElementMethods elementmethods;
 		BaseClass.Sleep();
 		elementmethods.textbox.textboxdisabled();
 		BaseClass.Sleep();
-//		elementmethods.textbox.ChoosethirdOpt("new jersery is in  USA");
+		elementmethods.textbox.chooseThirdOpt("3sdfsdf");
 		BaseClass.Sleep();
-		elementmethods.textbox.ClearText();
-		BaseClass.Sleep();
-		elementmethods.textbox.DOBChoosen("10/16/2000");
-		BaseClass.Sleep();
-		elementmethods.textbox.Retrieve();
-		BaseClass.Sleep();
-		elementmethods.textbox.TypeMail("vikramsreenivasulu@gmail.com");
-		BaseClass.Sleep();
-		elementmethods.textbox.Abouturself("hi this is vikram sreenivas. Iam working as here L1 Support");
-		BaseClass.Sleep();
-		elementmethods.textbox.SliderMove("34");
+//		elementmethods.textbox.ClearText();
+//		BaseClass.Sleep();
+//		elementmethods.textbox.DOBChoosen("10/16/2000");
+//		BaseClass.Sleep();
+//		elementmethods.textbox.Retrieve();
+//		BaseClass.Sleep();
+//		elementmethods.textbox.TypeMail("vikramsreenivasulu@gmail.com");
+//		BaseClass.Sleep();
+//		elementmethods.textbox.Abouturself("hi this is vikram sreenivas. Iam working as here L1 Support");
+//		BaseClass.Sleep();
+//		elementmethods.textbox.SliderMove("34");
 	}
 	
 	
