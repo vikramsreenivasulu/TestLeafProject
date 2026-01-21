@@ -142,7 +142,7 @@ public class ElementLocators {
 			public WebElement textboxdisabled;
 			
 			
-			 @FindBy(xpath ="j_idt106:auto-complete_input")
+			 @FindBy(id ="j_idt106:auto-complete_input")
 			 public WebElement ChoosethirdOpt;
 			 
 			
@@ -152,6 +152,12 @@ public class ElementLocators {
 			
 			@FindBy(id = "j_idt106:j_idt116_input")
 			public WebElement DOBChoosen;
+			
+			@FindBy(xpath = "//input[contains(@class,'ui-spinner-input ui-inputfield')]")
+			public WebElement SpintheValue;
+			
+			@FindBy(xpath = "(//span[contains(@class,'ui-icon ui-c')])[1]")
+			public WebElement UpArrowSpin;
 			
 			@FindBy(id="j_idt88:j_idt97")
 			public WebElement Retrieve;
@@ -165,6 +171,11 @@ public class ElementLocators {
 			@FindBy(id="j_idt106:slider")
 			public WebElement SliderMove;
 			
+			@FindBy(id = "j_idt106:j_idt122")
+			public WebElement KeyBoardAppead;
+			
+			@FindBy(xpath  = "//div[contains(@class,'ui-shadow keypad-popup ui-input-overlay')]")
+			public WebElement KeyBoardPopup;
 			
 		}
 }

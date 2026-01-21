@@ -12,6 +12,7 @@ import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -114,7 +115,7 @@ public class BaseClass {
 		dropdown.click();
 		BaseClass.Sleep();
 		BaseClass.Sleep();
-		WebElement element = driver.findElement(By.xpath("//li[@data-label='" + value + "']"));
+		WebElement element = driver.findElement(By.xpath("//li[@data-item-value='" + value + "']"));
 		element.click();
 	} // closing selectDropdown
 
@@ -126,6 +127,16 @@ public class BaseClass {
 		element.click();
 	} // Closing selectCourseDropdown
 
+	
+	public static void scrolldown() throws InterruptedException {
+		 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Thread.sleep(2000);
+        
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(2000);
+	}// closing scrolldown
 	public static void TakeScreenshot(String fileName) {
 
 //			 String path = System.getProperty("user.dir") + "/screenShot/";

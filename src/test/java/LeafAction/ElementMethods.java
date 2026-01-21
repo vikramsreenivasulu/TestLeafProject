@@ -11,12 +11,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 //import org.openqa.selenium.support.ui.Select;
 
 import LeafLocators.ElementLocators;
 import LeafLocators.ElementLocators.TextBox;
 import Utility.BaseClass;
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class ElementMethods {
 
@@ -189,7 +191,7 @@ public class ElementMethods {
 			}
 		}// closing RadioBttns
 		
-			public class TextBox{
+			public class TextBox  {
 				
 				public void Clicktextbox() {
 					elementlocators.textbox.ClickTextBox.click();
@@ -237,35 +239,29 @@ public class ElementMethods {
 				}
 				
 				
-//				 public void ChoosethirdOpt(String name ) throws InterruptedException{
-//					 
-//					 //elementlocators.textbox.ChoosethirdOpt.sendKeys(name); 
-//					 
-//					 JavascriptExecutor ChoosethirdOpt =  (JavascriptExecutor) BaseClass.driver;
-//					 ChoosethirdOpt.executeScript("arguments[0].sendKeys(name)", ChoosethirdOpt);
-//					 
-//				 }
-				 
-				public void chooseThirdOpt(String name) {
 
+				 
+				
 					
-					elementlocators.textbox.ChoosethirdOpt.sendKeys(name);
+					public void chooseThirdOpt(String name) {
+
+					    WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+					    WebElement chooseThirdOpt = wait.until(
+					        ExpectedConditions.elementToBeClickable(
+					            elementlocators.textbox.ChoosethirdOpt
+					        )
+					    );
+
+					    chooseThirdOpt.sendKeys(name);
+
+						WebElement element = BaseClass.driver
+								.findElement(By.xpath(("(//span[@id='j_idt106:auto-complete_panel']//ul//li)[3]")));
+						element.click();
 					
-//				    WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
-//				    WebElement ele = wait.until(
-//				        ExpectedConditions.elementToBeClickable(
-//				            
-//				        )
-//				    );
-//
-//				    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
-//				    //js.executeScript("arguments[0].scrollIntoView(true);", ele);
-//				    //js.executeScript("arguments[0].click();", ele);
-//				    js.executeScript("arguments[0].value='name';", ele);
-//
-//				    //ele.clear();      // optional
-//				    //ele.sendKeys(name);
-				}
+				}//Closing chooseThirdOpt
+					
+
+				
 
 				
 				public void ClearText() {
@@ -274,8 +270,9 @@ public class ElementMethods {
 				
 				public void DOBChoosen(String DOB) {
 					
-					elementlocators.textbox.DOBChoosen.sendKeys(DOB,Keys.ENTER);
+					elementlocators.textbox.DOBChoosen.sendKeys(DOB,Keys.ENTER,Keys.ESCAPE);
 					System.out.println(DOB);
+					//dateElement.sendKeys(Keys.ESCAPE);
 					String  Birth = "10/16/2000";
 					if(Birth==DOB) {
 						System.out.println("Given DOB is printed");
@@ -283,6 +280,7 @@ public class ElementMethods {
 					System.out.println("Given DOB is not printed");
 					}
 				}
+				
 				
 				public void Retrieve() {
 					
@@ -293,6 +291,21 @@ public class ElementMethods {
 						System.out.println("Retrieved Value is same ");
 					}else {
 						System.out.println("Retrieved Value is not same ");
+					}
+				}
+				
+				public void SpintheValue(String Value) throws InterruptedException {
+					elementlocators.textbox.SpintheValue.sendKeys(Value);
+					BaseClass.Sleep();
+					BaseClass.Sleep();
+					elementlocators.textbox.UpArrowSpin.click();
+					BaseClass.Sleep();
+					elementlocators.textbox.UpArrowSpin.click();
+					
+					if(Value.equals("121")) {
+						System.out.println("Given Value Changed ");
+					}else {
+							System.out.println("Given Value is not Changed ");
 					}
 				}
 				
@@ -309,9 +322,17 @@ public class ElementMethods {
 					
 				}
 				
+				public void KeyBoardAppead() {
+					elementlocators.textbox.KeyBoardAppead.click();
+					
+					Boolean appears = elementlocators.textbox.KeyBoardPopup.isDisplayed();
+					System.out.println("Keyboard is appears: "+appears);
+					Assert.assertTrue(appears, "Keyboard is appears");
+
+				}
 				
 			}//Closing TextBox
-			
-			
-		
 }
+
+		
+
