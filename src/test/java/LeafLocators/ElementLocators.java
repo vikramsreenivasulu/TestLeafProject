@@ -177,5 +177,23 @@ public class ElementLocators {
 			@FindBy(xpath  = "//div[contains(@class,'ui-shadow keypad-popup ui-input-overlay')]")
 			public WebElement KeyBoardPopup;
 			
+			@FindBy(xpath = "//button[contains(@class,'keypad-special keypad-close')]")
+			public WebElement KeyboardClose;
+			
+			@FindBy(xpath = "(//div[@class='ql-editor ql-blank'])[1]")
+			public WebElement TextEditor;
+			
+			@FindBy(xpath = "(//button[@class='ql-bold'])[1]")
+			public WebElement Bold;
+			
+			@FindBy(xpath = "(//button[@class='ql-italic'])[1]")
+			public WebElement  Italic;
+			
+			@FindBy(xpath = "(//button[@class='ql-underline'])[1]")
+			public WebElement Underline;
+			
+			
+			@FindBy(xpath = "//div[@data-placeholder='Enter your content']//p[1]")
+			public WebElement Toolbar;
 		}
 }

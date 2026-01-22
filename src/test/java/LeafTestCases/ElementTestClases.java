@@ -9,22 +9,20 @@ import Utility.BaseClass;
 
 public class ElementTestClases {
 
-public ElementMethods elementmethods;
+	public ElementMethods elementmethods;
 
-	
 	@BeforeSuite
 	public void BeforeSuit() {
 		BaseClass.startdriver();
-		elementmethods = new ElementMethods();	
+		elementmethods = new ElementMethods();
 	}
-	
-	
+
 	@Test()
 	public void Attest() throws InterruptedException {
-		
+
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
-		//DropDown
+		// DropDown
 		BaseClass.Sleep();
 		elementmethods.dropdown.ClickDropDown();
 		BaseClass.Sleep();
@@ -43,16 +41,14 @@ public ElementMethods elementmethods;
 		elementmethods.dropdown.Language("English");
 		BaseClass.Sleep();
 		elementmethods.dropdown.LanguageChoosen("Two");
-		
+
 		BaseClass.TakeScreenshot("Sample");
 		BaseClass.Sleep();
 	}
-	
-	
 
 	@Test
 	public void WaitsAtTest() throws InterruptedException {
-		
+
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
 		elementmethods.waits.Clickwaits();
@@ -67,12 +63,10 @@ public ElementMethods elementmethods;
 		BaseClass.Sleep();
 		elementmethods.waits.WaitforTextChange();
 	}
-	
-	
+
 	@Test()
-	public void RadioBttn() throws InterruptedException 
-	{
-		
+	public void RadioBttn() throws InterruptedException {
+
 		BaseClass.Sleep();
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
@@ -86,12 +80,10 @@ public ElementMethods elementmethods;
 		BaseClass.Sleep();
 		elementmethods.radiobttns.SelectAgeGrp();
 	}
-	
-	
+
 	@Test()
-	public void TextBox() throws InterruptedException 
-	{
-		
+	public void TextBox() throws InterruptedException {
+
 		BaseClass.Sleep();
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
@@ -124,24 +116,20 @@ public ElementMethods elementmethods;
 		elementmethods.textbox.SliderMove("34");
 		BaseClass.Sleep();
 		elementmethods.textbox.KeyBoardAppead();
+		BaseClass.Sleep();
+		elementmethods.textbox.KeyboardClose();
+		BaseClass.Sleep();
+		elementmethods.textbox.TextEditor(
+				"Fun Ways to Teach Kids About Cricket | Engaging Cricket FactsCricket is a popular bat-and-ball sport played between two  ");
+		BaseClass.Sleep();
+		elementmethods.textbox.TextEditor("teams of 11 players on a large oval field with a rectangular 22-yard pitch in the center, where a bowler tries to hit a wicket defended by a batsman, with the goal of scoring runs by hitting the ball and running between wickets, with different formats from short T20s to five-day Test matches. Originating in England, it's now a global sport, especially dominant in Commonwealth nations, featuring elements of batting, bowling, fielding, and complex rules.");
+		BaseClass.Sleep();
+		elementmethods.textbox.Toolbar("wjehfvuwvefuhwbkeufgyqwkurbkhwrferqgtewhtrh");
 	}
-	
-	
-	
-//	 @AfterSuite public void AfterSuite() { 
-//		 BaseClass.stoptdriver();
-//	  }
-	
-	 
-} //Final one
 
+	 @AfterSuite public void AfterSuite() 
+	 { 
+		 BaseClass.stoptdriver();
+	  }
 
-
-
-
-
-
-
-
-
-
+} // Final one

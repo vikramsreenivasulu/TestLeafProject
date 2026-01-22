@@ -305,7 +305,7 @@ public class ElementMethods {
 					if(Value.equals("121")) {
 						System.out.println("Given Value Changed ");
 					}else {
-							System.out.println("Given Value is not Changed ");
+							System.out.println("Given Value is not Changed......");
 					}
 				}
 				
@@ -328,9 +328,29 @@ public class ElementMethods {
 					Boolean appears = elementlocators.textbox.KeyBoardPopup.isDisplayed();
 					System.out.println("Keyboard is appears: "+appears);
 					Assert.assertTrue(appears, "Keyboard is appears");
-
+					
+					//elementlocators.textbox.KeyBoardAppead.sendKeys(Keys.ESCAPE);
+					
+//					Actions actions = new Actions(BaseClass.driver);
+//				    actions.sendKeys(Keys.ESCAPE).perform();
 				}
 				
+				public void KeyboardClose() {
+					elementlocators.textbox.KeyboardClose.click();
+				}
+				public void TextEditor(String text) throws InterruptedException {
+					elementlocators.textbox.TextEditor.sendKeys(text);
+					BaseClass.Sleep();
+					elementlocators.textbox.Bold.click();
+					BaseClass.Sleep();
+					elementlocators.textbox.Italic.click();
+					BaseClass.Sleep();
+					elementlocators.textbox.Underline.click();
+				}
+				
+				public void Toolbar(String tool) {
+					elementlocators.textbox.Toolbar.sendKeys(tool);
+				}
 			}//Closing TextBox
 }
 
