@@ -1,6 +1,5 @@
 package LeafLocators;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,6 +13,8 @@ public class ElementLocators {
 	public Waits waits;
 	public TextBox textbox;
 	
+	public Button button;
+	
 	public RadioBttns radiobttns;
 	
 		public ElementLocators() {
@@ -23,6 +24,7 @@ public class ElementLocators {
 			waits = new Waits();
 			radiobttns = new RadioBttns();
 			textbox = new TextBox();
+			button = new Button();
 			
 		}
 		
@@ -196,4 +198,49 @@ public class ElementLocators {
 			@FindBy(xpath = "//div[@data-placeholder='Enter your content']//p[1]")
 			public WebElement Toolbar;
 		}
+		 public class Button{
+			 
+			 public  Button() {
+				 PageFactory.initElements(BaseClass.driver, this);
+			 }
+			 
+			 @FindBy(xpath = "//span[normalize-space(text())='Button']")
+			 public WebElement ClickButton;
+			 
+			 @FindBy(xpath = "(//span[@class='ui-button-text ui-c'])[1]")
+			 public WebElement  Confirmtitle;
+			 
+			
+			 @FindBy(xpath = "//input[@placeholder='Search...']")
+			 public WebElement  SendKeys;
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+		 }//Closing Button
 }

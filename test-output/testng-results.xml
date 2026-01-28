@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-22T14:51:52 IST" name="Default suite" finished-at="2026-01-22T14:53:16 IST" duration-ms="83447">
+  <suite started-at="2026-01-28T14:25:14 IST" name="Default suite" finished-at="2026-01-28T14:25:24 IST" duration-ms="9961">
     <groups>
     </groups>
-    <test started-at="2026-01-22T14:51:52 IST" name="Default test" finished-at="2026-01-22T14:53:16 IST" duration-ms="83447">
+    <test started-at="2026-01-28T14:25:14 IST" name="Default test" finished-at="2026-01-28T14:25:24 IST" duration-ms="9961">
       <class name="LeafTestCases.ElementTestClases">
-        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:LeafTestCases.ElementTestClases@327514f]" started-at="2026-01-22T14:51:32 IST" name="BeforeSuit" finished-at="2026-01-22T14:51:52 IST" duration-ms="20509" status="PASS">
+        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:LeafTestCases.ElementTestClases@4c402120]" started-at="2026-01-28T14:25:04 IST" name="BeforeSuit" finished-at="2026-01-28T14:25:14 IST" duration-ms="10177" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuit -->
-        <test-method signature="TextBox()[pri:0, instance:LeafTestCases.ElementTestClases@327514f]" started-at="2026-01-22T14:51:52 IST" name="TextBox" finished-at="2026-01-22T14:53:16 IST" duration-ms="83374" status="PASS">
+        <test-method signature="Button()[pri:0, instance:LeafTestCases.ElementTestClases@4c402120]" started-at="2026-01-28T14:25:14 IST" name="Button" finished-at="2026-01-28T14:25:24 IST" duration-ms="9927" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TextBox -->
-        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:LeafTestCases.ElementTestClases@327514f]" started-at="2026-01-22T14:53:16 IST" name="AfterSuite" finished-at="2026-01-22T14:53:16 IST" duration-ms="279" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterSuite -->
+        </test-method> <!-- Button -->
       </class> <!-- LeafTestCases.ElementTestClases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

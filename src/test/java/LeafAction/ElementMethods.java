@@ -1,13 +1,10 @@
 package LeafAction;
 
-import java.awt.Desktop.Action;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,9 +13,7 @@ import org.testng.Assert;
 //import org.openqa.selenium.support.ui.Select;
 
 import LeafLocators.ElementLocators;
-import LeafLocators.ElementLocators.TextBox;
 import Utility.BaseClass;
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class ElementMethods {
 
@@ -30,6 +25,8 @@ public class ElementMethods {
 		public RadioBttns radiobttns;
 		public TextBox textbox;
 		
+		public Button button;
+		
 		 public ElementLocators elementlocators = new ElementLocators();
 		
 		 
@@ -39,6 +36,7 @@ public class ElementMethods {
 			waits = new Waits();
 			radiobttns = new RadioBttns();
 			textbox = new TextBox();
+			button = new Button();
 		}
 	
 		public class ElementMethod{
@@ -352,6 +350,22 @@ public class ElementMethods {
 					elementlocators.textbox.Toolbar.sendKeys(tool);
 				}
 			}//Closing TextBox
+			
+			public class Button{
+				
+				public void ClickButton() {
+					elementlocators.button.ClickButton.click();
+				}
+				
+				public void Confirmtitle() {
+					elementlocators.button.Confirmtitle.click();
+				}
+				
+				public void Sendkeys(String possi) {
+					elementlocators.button.SendKeys.sendKeys(possi);
+				}
+			}// Closing Button
+			
 }
 
 		

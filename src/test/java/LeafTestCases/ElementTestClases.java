@@ -18,7 +18,7 @@ public class ElementTestClases {
 	}
 
 	@Test()
-	public void Attest() throws InterruptedException {
+	public void DropDownAttest() throws InterruptedException {
 
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
@@ -127,9 +127,77 @@ public class ElementTestClases {
 		elementmethods.textbox.Toolbar("wjehfvuwvefuhwbkeufgyqwkurbkhwrferqgtewhtrh");
 	}
 
-	 @AfterSuite public void AfterSuite() 
-	 { 
-		 BaseClass.stoptdriver();
-	  }
+	@Test()
+	public void Button() throws InterruptedException {
+		BaseClass.Sleep();
+		elementmethods.elementmethod.ClickElement();
+		BaseClass.Sleep();
+		elementmethods.button.ClickButton();
+		BaseClass.Sleep();
+		elementmethods.button.Confirmtitle();
+		BaseClass.Sleep();
+		elementmethods.button.Sendkeys("possible it");
+		BaseClass.Sleep();
+		elementmethods.elementmethod.ClickElement();
+		BaseClass.Sleep();
+		elementmethods.button.ClickButton();
+		BaseClass.Sleep();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}//end Button
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	 @AfterSuite 
+//	 public void AfterSuite() 
+//	 { 
+//		 BaseClass.stoptdriver();
+//	  }
 
 } // Final one
