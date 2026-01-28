@@ -2,16 +2,16 @@
 <testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-28T14:25:14 IST" name="Default suite" finished-at="2026-01-28T14:25:24 IST" duration-ms="9961">
+  <suite started-at="2026-01-28T15:50:40 IST" name="Default suite" finished-at="2026-01-28T15:51:04 IST" duration-ms="23732">
     <groups>
     </groups>
-    <test started-at="2026-01-28T14:25:14 IST" name="Default test" finished-at="2026-01-28T14:25:24 IST" duration-ms="9961">
+    <test started-at="2026-01-28T15:50:40 IST" name="Default test" finished-at="2026-01-28T15:51:04 IST" duration-ms="23732">
       <class name="LeafTestCases.ElementTestClases">
-        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:LeafTestCases.ElementTestClases@4c402120]" started-at="2026-01-28T14:25:04 IST" name="BeforeSuit" finished-at="2026-01-28T14:25:14 IST" duration-ms="10177" status="PASS">
+        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:LeafTestCases.ElementTestClases@4c402120]" started-at="2026-01-28T15:50:37 IST" name="BeforeSuit" finished-at="2026-01-28T15:50:40 IST" duration-ms="3465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuit -->
-        <test-method signature="Button()[pri:0, instance:LeafTestCases.ElementTestClases@4c402120]" started-at="2026-01-28T14:25:14 IST" name="Button" finished-at="2026-01-28T14:25:24 IST" duration-ms="9927" status="PASS">
+        <test-method signature="Button()[pri:0, instance:LeafTestCases.ElementTestClases@4c402120]" started-at="2026-01-28T15:50:40 IST" name="Button" finished-at="2026-01-28T15:51:04 IST" duration-ms="23701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Button -->

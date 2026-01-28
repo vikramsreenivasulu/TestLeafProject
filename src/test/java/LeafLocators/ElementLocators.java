@@ -214,11 +214,14 @@ public class ElementLocators {
 			 @FindBy(xpath = "//input[@placeholder='Search...']")
 			 public WebElement  SendKeys;
 			 
+			 @FindBy(xpath = "//span[contains(@class,'ui-button-icon-right ui-icon')]/following-sibling::span[1]")
+			 public WebElement Submit;
 			 
+			 @FindBy(id = "j_idt88:j_idt92")
+			 public WebElement disablebutton;
 			 
-			 
-			 
-			 
+			 @FindBy(xpath = "//button[@name='j_idt88:j_idt100']//span[1]")
+			 public WebElement Success;
 			 
 			 
 			 

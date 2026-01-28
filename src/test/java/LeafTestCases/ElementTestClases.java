@@ -142,9 +142,11 @@ public class ElementTestClases {
 		BaseClass.Sleep();
 		elementmethods.button.ClickButton();
 		BaseClass.Sleep();
-		
-		
-		
+		elementmethods.button.heightWidth();
+		BaseClass.Sleep();
+		elementmethods.button.disablebutton();
+		BaseClass.Sleep();
+		elementmethods.button.SuccessHover();
 		
 		
 		
