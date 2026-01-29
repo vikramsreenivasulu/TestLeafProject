@@ -223,12 +223,17 @@ public class ElementLocators {
 			 @FindBy(xpath = "//button[@name='j_idt88:j_idt100']//span[1]")
 			 public WebElement Success;
 			 
+			 @FindBy(xpath = "(//span[@class='ui-button-text ui-c'])[3]")
+			 public WebElement FindPosition;
 			 
+			 @FindBy(xpath = "//span[normalize-space(text())='Image']")
+			 public WebElement Image;
 			 
+			 @FindBy(xpath = "//div[@class='grid formgrid']")
+			 public WebElement Emptyspace;
 			 
-			 
-			 
-			 
+			 @FindBy(id = "j_idt88:j_idt96")
+			 public WebElement FindColor;
 			 
 			 
 			 

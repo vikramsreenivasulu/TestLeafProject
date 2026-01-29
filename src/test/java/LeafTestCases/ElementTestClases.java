@@ -147,10 +147,14 @@ public class ElementTestClases {
 		elementmethods.button.disablebutton();
 		BaseClass.Sleep();
 		elementmethods.button.SuccessHover();
-		
-		
-		
-		
+		BaseClass.Sleep();
+		elementmethods.button.FindPosition();
+		BaseClass.Sleep();
+		elementmethods.button.Image();
+		BaseClass.Sleep();
+		elementmethods.button.EmptySpace();
+		BaseClass.Sleep();
+		elementmethods.button.FindColor();
 		
 		
 		

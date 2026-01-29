@@ -7,6 +7,7 @@ import java.time.Duration;
 import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -386,10 +387,29 @@ public class ElementMethods {
 			Assert.assertNotEquals(actualValue, actuchangedValuealValue, "Value did nit changfe");
 		}
 
+		public void FindPosition() {
+			Point location = elementlocators.button.FindPosition.getLocation();
+			
+			int Valuex = location.getX();
+			int Valuey = location.getY();
+			
+			
+			System.out.println("button value x position"+Valuex);
+			System.out.println("button value y position"+Valuey);
+		}
 		
+		public void Image() {
+			elementlocators.button.Image.click();
+		}
 		
+		public void EmptySpace() {
+			elementlocators.button.Emptyspace.click();
+		}
 		
-		
+		public void FindColor() {
+			String backgroundcolor = elementlocators.button.FindColor.getCssValue("background-color");
+			System.out.println("backgroundcolor "+backgroundcolor);
+		}
 		
 	}// Closing Button
 
