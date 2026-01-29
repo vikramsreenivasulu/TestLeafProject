@@ -155,29 +155,37 @@ public class ElementTestClases {
 		elementmethods.button.EmptySpace();
 		BaseClass.Sleep();
 		elementmethods.button.FindColor();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		BaseClass.Sleep();
+		elementmethods.button.roundedButtons();
 		
 	}//end Button
 	
-	
+	@Test()
+	public void CheckBox() throws InterruptedException {
+		
+		
+		
+		BaseClass.Sleep();
+		elementmethods.elementmethod.ClickElement();
+		BaseClass.Sleep();
+		elementmethods.checkbox.ClickCheckBox();
+//		BaseClass.Sleep();
+//		elementmethods.checkbox.BasicCheckBox();
+//		BaseClass.Sleep();
+//		elementmethods.checkbox.ToggleSwitch();
+//		BaseClass.Sleep();
+//		elementmethods.checkbox.Notification();
+//		BaseClass.Sleep();
+//		elementmethods.checkbox.CheckBoxDisabled();
+		BaseClass.Sleep();
+		elementmethods.checkbox.FavLang();
+		
+		
+		
+		
+		
+		
+	}//checkbox
 	
 	
 	

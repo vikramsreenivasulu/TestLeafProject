@@ -1,21 +1,20 @@
 package LeafAction;
 
-import static org.testng.Assert.assertEquals;
-
 import java.time.Duration;
+import java.util.List;
 
-import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
+
 
 //import org.openqa.selenium.support.ui.Select;
 
@@ -34,6 +33,7 @@ public class ElementMethods {
 
 	public Button button;
 
+	public CheckBox checkbox;
 	public ElementLocators elementlocators = new ElementLocators();
 
 	public ElementMethods() {
@@ -43,6 +43,7 @@ public class ElementMethods {
 		radiobttns = new RadioBttns();
 		textbox = new TextBox();
 		button = new Button();
+		checkbox = new CheckBox();
 	}
 
 	public class ElementMethod {
@@ -391,8 +392,7 @@ public class ElementMethods {
 			Point location = elementlocators.button.FindPosition.getLocation();
 			
 			int Valuex = location.getX();
-			int Valuey = location.getY();
-			
+			int Valuey = location.getY();			
 			
 			System.out.println("button value x position"+Valuex);
 			System.out.println("button value y position"+Valuey);
@@ -409,8 +409,94 @@ public class ElementMethods {
 		public void FindColor() {
 			String backgroundcolor = elementlocators.button.FindColor.getCssValue("background-color");
 			System.out.println("backgroundcolor "+backgroundcolor);
+			
 		}
 		
+		
+		public void roundedButtons() {
+			
+			 int size = elementlocators.button.roundedButtons.size();
+			System.out.println("Number of round buttons: "+  size);
+		}	
 	}// Closing Button
 
+	public class CheckBox{
+		
+		public void ClickCheckBox() {
+			elementlocators.checkbox.ClickCheckBox.click();
+		}
+		
+		public void BasicCheckBox() {
+			elementlocators.checkbox.BasicCheckBox.click();
+		}
+		
+		public void ToggleSwitch() {
+			
+			
+//			WebElement element = driver.findElement(By.id("submit"));
+//			JavascriptExecutor js = (JavascriptExecutor) driver;
+//			js.executeScript("arguments[0].click();", element);
+			
+			WebElement toggleSwitch = elementlocators.checkbox.ToggleSwitch;
+			JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+			js.executeScript("arguments[0].click();", toggleSwitch);
+			
+			boolean Toggledisplayed = elementlocators.checkbox.ToggleChecked.isDisplayed();
+			Assert.assertTrue(Toggledisplayed,"is not displayed");
+			
+			//Assert.assertFalse(disable, "is not enables which means it is disabled");
+		}
+		
+		
+		public void Notification() throws InterruptedException {
+			
+			BaseClass.Sleep();
+			elementlocators.checkbox.Notification.click();
+			BaseClass.Sleep();
+			boolean NotiCheck = elementlocators.checkbox.NotifyCheck.isDisplayed();
+			Assert.assertTrue(NotiCheck,"is not displayed");
+		}
+		
+		public void CheckBoxDisabled() {
+			
+			boolean disable = elementlocators.checkbox.CheckBoxDisabled.isEnabled();	
+			Assert.assertFalse(disable,"check box is Enabled");
+			
+			System.out.println("checkbox is disable");
+		}
+		
+		public void FavLang() {
+			
+			Dimension Lang = elementlocators.checkbox.FavLang.getSize();
+			
+			System.out.println(Lang);
+			
+//			List<WebElement> Lang = elementlocators.checkbox.FavLang.getSize();
+//			System.out.println(Lang.size());
+//			for (int i = 0; i < Lang.size(); i++) {
+//				Lang.get(i).click();
+//			}
+			
+		}
+			
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}//Closing CheckBox para
+	
+	
+	
 }

@@ -1,5 +1,7 @@
 package LeafLocators;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,7 +14,7 @@ public class ElementLocators {
 	public DropDowns dropdowns;
 	public Waits waits;
 	public TextBox textbox;
-	
+	public CheckBox checkbox;
 	public Button button;
 	
 	public RadioBttns radiobttns;
@@ -25,6 +27,7 @@ public class ElementLocators {
 			radiobttns = new RadioBttns();
 			textbox = new TextBox();
 			button = new Button();
+			checkbox = new CheckBox();
 			
 		}
 		
@@ -235,20 +238,52 @@ public class ElementLocators {
 			 @FindBy(id = "j_idt88:j_idt96")
 			 public WebElement FindColor;
 			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
+			 @FindBy (xpath = "//button[contains(@class,'rounded-button')]")
+			 public List <WebElement> roundedButtons;
 		 }//Closing Button
-}
+		 
+		 
+		 
+		 public class CheckBox{
+			 
+			 public  CheckBox() {
+				 PageFactory.initElements(BaseClass.driver, this);
+			 }
+			 
+			 @FindBy(xpath="//span[normalize-space(text())='Check Box']")
+			 public WebElement ClickCheckBox;
+			 
+			 @FindBy(xpath="(//div[contains(@class,'ui-chkbox-box ui-widget')])[1]")
+			 public WebElement BasicCheckBox;
+			 
+			 @FindBy(xpath="(//div[@class='ui-toggleswitch ui-widget']//div)[2]")
+			 public WebElement ToggleSwitch;
+			 
+			 @FindBy(xpath="//span[normalize-space(text())='Checked']")
+			 public WebElement ToggleChecked;
+			 
+			 @FindBy(xpath="//span[normalize-space(text())='Ajax']")
+			 public WebElement Notification;
+			 
+			@FindBy(xpath="//span[normalize-space(text())='Checked']")
+			public WebElement NotifyCheck;
+			 
+			 @FindBy(xpath="//input[@id='j_idt87:j_idt102_input']")
+			 public WebElement CheckBoxDisabled;
+			 
+			 
+			 @FindBy(xpath = "(//div[@class='ui-chkbox-box ui-widget ui-corner-all ui-state-default'])[3]")
+			 public WebElement FavLang;
+		 }//Closing CheckBox
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+}//main closing para
