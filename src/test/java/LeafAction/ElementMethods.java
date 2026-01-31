@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
@@ -14,7 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 
 //import org.openqa.selenium.support.ui.Select;
 
@@ -377,126 +375,145 @@ public class ElementMethods {
 		}
 
 		public void SuccessHover() {
-			
-			Actions hover  = new Actions(BaseClass.driver);
+
+			Actions hover = new Actions(BaseClass.driver);
 			String actualValue = elementlocators.button.Success.getAttribute("style");
-			
+
 			hover.moveToElement(elementlocators.button.Success).build().perform();
-			
+
 			String actuchangedValuealValue = elementlocators.button.Success.getAttribute("style");
-			
+
 			Assert.assertNotEquals(actualValue, actuchangedValuealValue, "Value did nit changfe");
 		}
 
 		public void FindPosition() {
 			Point location = elementlocators.button.FindPosition.getLocation();
-			
+
 			int Valuex = location.getX();
-			int Valuey = location.getY();			
-			
-			System.out.println("button value x position"+Valuex);
-			System.out.println("button value y position"+Valuey);
+			int Valuey = location.getY();
+
+			System.out.println("button value x position" + Valuex);
+			System.out.println("button value y position" + Valuey);
 		}
-		
+
 		public void Image() {
 			elementlocators.button.Image.click();
 		}
-		
+
 		public void EmptySpace() {
 			elementlocators.button.Emptyspace.click();
 		}
-		
+
 		public void FindColor() {
 			String backgroundcolor = elementlocators.button.FindColor.getCssValue("background-color");
-			System.out.println("backgroundcolor "+backgroundcolor);
-			
+			System.out.println("backgroundcolor " + backgroundcolor);
+
 		}
-		
-		
+
 		public void roundedButtons() {
-			
-			 int size = elementlocators.button.roundedButtons.size();
-			System.out.println("Number of round buttons: "+  size);
-		}	
+
+			int size = elementlocators.button.roundedButtons.size();
+			System.out.println("Number of round buttons: " + size);
+		}
 	}// Closing Button
 
-	public class CheckBox{
-		
+	public class CheckBox {
+
 		public void ClickCheckBox() {
 			elementlocators.checkbox.ClickCheckBox.click();
 		}
-		
+
 		public void BasicCheckBox() {
 			elementlocators.checkbox.BasicCheckBox.click();
 		}
-		
+
 		public void ToggleSwitch() {
-			
-			
+
 //			WebElement element = driver.findElement(By.id("submit"));
 //			JavascriptExecutor js = (JavascriptExecutor) driver;
 //			js.executeScript("arguments[0].click();", element);
-			
+
 			WebElement toggleSwitch = elementlocators.checkbox.ToggleSwitch;
 			JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
 			js.executeScript("arguments[0].click();", toggleSwitch);
-			
+
 			boolean Toggledisplayed = elementlocators.checkbox.ToggleChecked.isDisplayed();
-			Assert.assertTrue(Toggledisplayed,"is not displayed");
-			
-			//Assert.assertFalse(disable, "is not enables which means it is disabled");
+			Assert.assertTrue(Toggledisplayed, "is not displayed");
+
+			// Assert.assertFalse(disable, "is not enables which means it is disabled");
 		}
-		
-		
+
 		public void Notification() throws InterruptedException {
-			
+
 			BaseClass.Sleep();
 			elementlocators.checkbox.Notification.click();
 			BaseClass.Sleep();
 			boolean NotiCheck = elementlocators.checkbox.NotifyCheck.isDisplayed();
-			Assert.assertTrue(NotiCheck,"is not displayed");
+			Assert.assertTrue(NotiCheck, "is not displayed");
 		}
-		
+
 		public void CheckBoxDisabled() {
-			
-			boolean disable = elementlocators.checkbox.CheckBoxDisabled.isEnabled();	
-			Assert.assertFalse(disable,"check box is Enabled");
-			
+
+			boolean disable = elementlocators.checkbox.CheckBoxDisabled.isEnabled();
+			Assert.assertFalse(disable, "check box is Enabled");
+
 			System.out.println("checkbox is disable");
 		}
-		
-		public void FavLang() {
-			
-			Dimension Lang = elementlocators.checkbox.FavLang.getSize();
-			
-			System.out.println(Lang);
-			
-//			List<WebElement> Lang = elementlocators.checkbox.FavLang.getSize();
-//			System.out.println(Lang.size());
-//			for (int i = 0; i < Lang.size(); i++) {
-//				Lang.get(i).click();
-//			}
-			
-		}
-			
 
 		
 		
+		public void FavLang() {
+
+			List<WebElement> totalLang = elementlocators.checkbox.FavLang;
+			int count = totalLang.size();
+			System.out.println("Total Clickable checkboxes: " + count);
+
+			for (int i = 0; i <3; i++) {
+				totalLang.get(i).click();
+				System.out.println(totalLang.get(i).getText());
+			}	
+		}
+			
+/*//				for (int i = 0; i <count; i++) {
+//				String tempText = totalLang.get(i).getText();
+//				if(tempText.equalsIgnoreCase("Java")  || tempText.equalsIgnoreCase("C-Sharp")) 
+//				{
+//					 totalLang.get(i).click();
+//				}
+*/			
+		
+		public void SelectMulti() throws InterruptedException {
+			elementlocators.checkbox.SelectMulti.click();
+			BaseClass.Sleep();
+			BaseClass.Sleep();
+			elementlocators.checkbox.DropDown.click();
+			BaseClass.Sleep();
+			elementlocators.checkbox.DropDownClose.click();
+		}
 		
 		
+		public void TriStateCheckBox() {
+			while (true) {
+		        elementlocators.checkbox.TriStateCheckBox.click();
+
+		        WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
+		        WebElement stateElement = wait.until(
+		                ExpectedConditions.visibilityOf(elementlocators.checkbox.StateValue));
+
+		        String text = stateElement.getText();
+		        String value = text.split("=")[1].trim();
+		        System.out.println( value);
+		        if (value.equals("2")) {
+		            break;
+		        }
+		    }
 		
+		}
 		
+	}//checkboxClosing
 		
-		
-		
-		
-		
-		
-		
-		
-		
-	}//Closing CheckBox para
-	
-	
-	
-}
+	}//main Closing
+
+
+
+

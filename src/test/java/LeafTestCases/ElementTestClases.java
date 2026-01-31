@@ -169,17 +169,20 @@ public class ElementTestClases {
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
 		elementmethods.checkbox.ClickCheckBox();
-//		BaseClass.Sleep();
-//		elementmethods.checkbox.BasicCheckBox();
-//		BaseClass.Sleep();
-//		elementmethods.checkbox.ToggleSwitch();
-//		BaseClass.Sleep();
-//		elementmethods.checkbox.Notification();
-//		BaseClass.Sleep();
-//		elementmethods.checkbox.CheckBoxDisabled();
+		BaseClass.Sleep();
+		elementmethods.checkbox.BasicCheckBox();
+		BaseClass.Sleep();
+		elementmethods.checkbox.ToggleSwitch();
+		BaseClass.Sleep();
+		elementmethods.checkbox.Notification();
+		BaseClass.Sleep();
+		elementmethods.checkbox.CheckBoxDisabled();
 		BaseClass.Sleep();
 		elementmethods.checkbox.FavLang();
-		
+		BaseClass.Sleep();
+		elementmethods.checkbox.SelectMulti();
+		BaseClass.Sleep();
+		elementmethods.checkbox.TriStateCheckBox();
 		
 		
 		

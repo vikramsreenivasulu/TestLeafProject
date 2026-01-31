@@ -272,13 +272,30 @@ public class ElementLocators {
 			 public WebElement CheckBoxDisabled;
 			 
 			 
-			 @FindBy(xpath = "(//div[@class='ui-chkbox-box ui-widget ui-corner-all ui-state-default'])[3]")
-			 public WebElement FavLang;
+			 @FindBy(xpath = "//table[@id='j_idt87:basic']//div[@class='ui-chkbox ui-widget']")
+			 public List<WebElement> FavLang;
+			 
+			 @FindBy(xpath="//div[@id='j_idt87:multiple']")
+			 public WebElement SelectMulti;
+			 
+			 @FindBy(xpath="(//div[@class='ui-chkbox-box ui-widget ui-corner-all ui-state-default'])[9]")
+			 public WebElement DropDown;
+			 
+			 @FindBy(xpath="//span[@class='ui-icon ui-icon-circle-close']")
+			 public WebElement DropDownClose;
+			 
+			 @FindBy(xpath="//div[@data-iconstates='[\"\",\"ui-icon ui-icon-check\",\"ui-icon ui-icon-closethick\"]']")
+			 public WebElement TriStateCheckBox;
+			 
+			 @FindBy(xpath="//p[contains(text(),'State =')]")
+			 public WebElement StateValue;
+			 
 		 }//Closing CheckBox
 		 
 		 
 		 
 		 
+
 		 
 		 
 		 

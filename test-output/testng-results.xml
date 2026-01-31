@@ -2,16 +2,16 @@
 <testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-29T17:44:57 IST" name="Default suite" finished-at="2026-01-29T17:45:06 IST" duration-ms="9041">
+  <suite started-at="2026-01-31T11:26:27 IST" name="Default suite" finished-at="2026-01-31T11:26:57 IST" duration-ms="30418">
     <groups>
     </groups>
-    <test started-at="2026-01-29T17:44:57 IST" name="Default test" finished-at="2026-01-29T17:45:06 IST" duration-ms="9041">
+    <test started-at="2026-01-31T11:26:27 IST" name="Default test" finished-at="2026-01-31T11:26:57 IST" duration-ms="30418">
       <class name="LeafTestCases.ElementTestClases">
-        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:LeafTestCases.ElementTestClases@327514f]" started-at="2026-01-29T17:44:51 IST" name="BeforeSuit" finished-at="2026-01-29T17:44:57 IST" duration-ms="5872" status="PASS">
+        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:LeafTestCases.ElementTestClases@327514f]" started-at="2026-01-31T11:26:22 IST" name="BeforeSuit" finished-at="2026-01-31T11:26:27 IST" duration-ms="4850" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuit -->
-        <test-method signature="CheckBox()[pri:0, instance:LeafTestCases.ElementTestClases@327514f]" started-at="2026-01-29T17:44:57 IST" name="CheckBox" finished-at="2026-01-29T17:45:06 IST" duration-ms="8994" status="PASS">
+        <test-method signature="CheckBox()[pri:0, instance:LeafTestCases.ElementTestClases@327514f]" started-at="2026-01-31T11:26:27 IST" name="CheckBox" finished-at="2026-01-31T11:26:57 IST" duration-ms="30383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckBox -->
