@@ -194,6 +194,16 @@ public class ElementTestClases {
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
 		elementmethods.hyperlink.ClickHypeLink();
+		BaseClass.Sleep();
+		elementmethods.hyperlink.DashBoard();
+		BaseClass.Sleep();
+		elementmethods.elementmethod.ClickElement();
+		BaseClass.Sleep();
+		elementmethods.hyperlink.ClickHypeLink();
+		BaseClass.Sleep();
+		elementmethods.hyperlink.destination();
+		BaseClass.Sleep();
+		elementmethods.hyperlink.CountLinks();
 	}
 	
 	

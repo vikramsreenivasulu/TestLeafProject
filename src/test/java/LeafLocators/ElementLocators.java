@@ -300,6 +300,20 @@ public class ElementLocators {
 			 
 			 @FindBy(xpath="//li[@id='menuform:m_link']//a[1]")
 			 public WebElement ClickHypeLink;
+			 
+			 @FindBy(xpath="(//a[@class='ui-link ui-widget'])[1]")
+			 public WebElement DashBoard;
+			 
+			 @FindBy(xpath="//a[normalize-space(text())='Find the URL without clicking me.']")
+			 public WebElement destination;
+			 
+			 @FindBy(xpath="//a[normalize-space(text())='How many links in this page?']")
+			 public List<WebElement> CountLinks;
+			 
+			 
+			 
+			 
+			 
 		 }
 		 
 		 

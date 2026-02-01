@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
@@ -521,7 +522,54 @@ public class ElementMethods {
 		public void ClickHypeLink() {
 			elementlocators.hyperlinks.ClickHypeLink.click();
 		}
+		
+		public void DashBoard() {
+			elementlocators.hyperlinks.DashBoard.click();
 	}
+		
+		public void destination() {
+			String destination = elementlocators.hyperlinks.destination.getAttribute("href");
+			System.out.println("Find my destination:"+destination);
+		}
+		
+		public void CountLinks() {
+			
+			//no. of element use chesetapudu manam list<> tag ni vaadali
+			
+			int size = elementlocators.hyperlinks.CountLinks.size();
+			System.out.println("size of counted links:"+size);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	}//main Closing
 
