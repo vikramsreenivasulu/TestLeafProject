@@ -182,16 +182,19 @@ public class ElementTestClases {
 		BaseClass.Sleep();
 		elementmethods.checkbox.SelectMulti();
 		BaseClass.Sleep();
-		elementmethods.checkbox.TriStateCheckBox();
-		
-		
-		
-		
+		elementmethods.checkbox.TriStateCheckBox();	
 		
 	}//checkbox
 	
 	
-	
+	@Test()
+	public void HyperLink() throws InterruptedException {
+		
+		BaseClass.Sleep();
+		elementmethods.elementmethod.ClickElement();
+		BaseClass.Sleep();
+		elementmethods.hyperlink.ClickHypeLink();
+	}
 	
 	
 	

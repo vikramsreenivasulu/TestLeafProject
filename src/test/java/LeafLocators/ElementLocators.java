@@ -16,8 +16,8 @@ public class ElementLocators {
 	public TextBox textbox;
 	public CheckBox checkbox;
 	public Button button;
-	
 	public RadioBttns radiobttns;
+	public HyperLinks hyperlinks;
 	
 		public ElementLocators() {
 			
@@ -28,7 +28,7 @@ public class ElementLocators {
 			textbox = new TextBox();
 			button = new Button();
 			checkbox = new CheckBox();
-			
+			hyperlinks = new HyperLinks();
 		}
 		
 		
@@ -292,7 +292,15 @@ public class ElementLocators {
 			 
 		 }//Closing CheckBox
 		 
-		 
+		 public class HyperLinks{
+			 
+			 public  HyperLinks() {
+				 PageFactory.initElements(BaseClass.driver, this);
+			 }
+			 
+			 @FindBy(xpath="//li[@id='menuform:m_link']//a[1]")
+			 public WebElement ClickHypeLink;
+		 }
 		 
 		 
 

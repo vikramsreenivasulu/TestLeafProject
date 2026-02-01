@@ -32,6 +32,8 @@ public class ElementMethods {
 	public Button button;
 
 	public CheckBox checkbox;
+	
+	public HyperLink hyperlink;
 	public ElementLocators elementlocators = new ElementLocators();
 
 	public ElementMethods() {
@@ -42,6 +44,7 @@ public class ElementMethods {
 		textbox = new TextBox();
 		button = new Button();
 		checkbox = new CheckBox();
+		hyperlink = new HyperLink();
 	}
 
 	public class ElementMethod {
@@ -512,6 +515,14 @@ public class ElementMethods {
 		
 	}//checkboxClosing
 		
+	
+	public class HyperLink{
+		
+		public void ClickHypeLink() {
+			elementlocators.hyperlinks.ClickHypeLink.click();
+		}
+	}
+	
 	}//main Closing
 
 
