@@ -313,7 +313,8 @@ public class ElementLocators {
 			 @FindBy(xpath="(//div[@class='col-12 md:col-6'])[2]//div[@class='col-12']")
 			 public List<WebElement> CountLayoutLinks;
 			 
-			 
+			 @FindBy(xpath="//a[@href='lists.xhtml']")
+			 public WebElement BrokenLink;
 			 
 		 }
 		 

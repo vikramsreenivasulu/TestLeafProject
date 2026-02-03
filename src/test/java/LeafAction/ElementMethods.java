@@ -3,6 +3,7 @@ package LeafAction;
 import java.time.Duration;
 import java.util.List;
 
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -545,7 +546,13 @@ public class ElementMethods {
 			System.out.println("Counted links in layout"+size);
 		}
 		
-		
+		public void BrokenLink() {
+			
+			String attribute = elementlocators.hyperlinks.BrokenLink.getAttribute("href");
+			System.out.println("Broken link is "+attribute);
+			
+			
+		}
 		
 		
 		
