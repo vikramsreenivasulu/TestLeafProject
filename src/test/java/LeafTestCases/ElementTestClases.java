@@ -204,6 +204,9 @@ public class ElementTestClases {
 		elementmethods.hyperlink.destination();
 		BaseClass.Sleep();
 		elementmethods.hyperlink.CountLinks();
+		BaseClass.Sleep();
+		elementmethods.hyperlink.CountLayoutLinks();
+		
 	}
 	
 	

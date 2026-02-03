@@ -540,7 +540,10 @@ public class ElementMethods {
 			System.out.println("size of counted links:"+size);
 		}
 		
-		
+		public void CountLayoutLinks() {
+			int size = elementlocators.hyperlinks.CountLayoutLinks.size();
+			System.out.println("Counted links in layout"+size);
+		}
 		
 		
 		

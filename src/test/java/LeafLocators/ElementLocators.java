@@ -310,7 +310,8 @@ public class ElementLocators {
 			 @FindBy(xpath="//a[normalize-space(text())='How many links in this page?']")
 			 public List<WebElement> CountLinks;
 			 
-			 
+			 @FindBy(xpath="(//div[@class='col-12 md:col-6'])[2]//div[@class='col-12']")
+			 public List<WebElement> CountLayoutLinks;
 			 
 			 
 			 
