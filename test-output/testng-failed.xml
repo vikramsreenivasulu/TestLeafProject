@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LeafTestCases.ElementTestClases">
+      <class name="LeafTestCases.MiscTestClasses">
         <methods>
-          <include name="BeforeSuit"/>
-          <include name="CheckBox"/>
+          <include name="AtTest"/>
+          <include name="BeforeSuite"/>
         </methods>
-      </class> <!-- LeafTestCases.ElementTestClases -->
+      </class> <!-- LeafTestCases.MiscTestClasses -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
