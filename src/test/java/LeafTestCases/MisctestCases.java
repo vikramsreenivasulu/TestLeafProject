@@ -18,24 +18,24 @@ public class MisctestCases {
  
  
     @Test()
-    public void Atest() throws InterruptedException {
+    public void AtestMisc() throws InterruptedException {
     	
     	BaseClass.Sleep();
     	miscmethods.miscmethod.ClickMisc();
     	BaseClass.Sleep();
     	miscmethods.message.ClickMessage();
-//    	BaseClass.Sleep();
-//    	miscmethods.message.ClickMessageInfo();
-//    	BaseClass.Sleep();
-//    	miscmethods.message.ClickMessageWarn();
-//    	BaseClass.Sleep();
-//    	miscmethods.message.ClickMessageError();
-//    	BaseClass.Sleep();
-//    	miscmethods.message.ClickGrowlInfo();
-//    	BaseClass.Sleep();
-//    	miscmethods.message.ClickGrowWarn();
-//    	BaseClass.Sleep();
-//    	miscmethods.message.ClickGrowError();
+    	BaseClass.Sleep();
+    	miscmethods.message.ClickMessageInfo();
+    	BaseClass.Sleep();
+    	miscmethods.message.ClickMessageWarn();
+    	BaseClass.Sleep();
+    	miscmethods.message.ClickMessageError();
+    	BaseClass.Sleep();
+    	miscmethods.message.ClickGrowlInfo();
+    	BaseClass.Sleep();
+    	miscmethods.message.ClickGrowWarn();
+    	BaseClass.Sleep();
+    	miscmethods.message.ClickGrowError();
     	BaseClass.Sleep();
     	miscmethods.message.InLineFirstName("vikram");
     	BaseClass.Sleep();
@@ -43,7 +43,40 @@ public class MisctestCases {
     	BaseClass.Sleep();
     	miscmethods.message.InLineMail("vikram@gmail.com");
     	BaseClass.Sleep();
-    	miscmethods.message.InLineSubject();
+    	miscmethods.message.InLineSubject(); 	
+    }//end Misc
+    
+    @Test()
+    public void AtTestVideo() throws InterruptedException {	
+    	BaseClass.Sleep();
+    	miscmethods.miscmethod.ClickMisc();
+    	BaseClass.Sleep();
+    	miscmethods.video.ClickVideo();
+    	BaseClass.Sleep(); 	
+    }//end video
+    
+    
+    @Test()
+    public void ATtestChart() throws InterruptedException {
     	
+    	BaseClass.Sleep();
+    	miscmethods.miscmethod.ClickMisc();
+    	BaseClass.Sleep();
+    	miscmethods.chart.ClickChart(); 	
+    }//EndChart
+    
+    @Test()
+    public void ATtestFile() throws InterruptedException {
+    	
+    	BaseClass.Sleep();
+    	miscmethods.miscmethod.ClickMisc();
+    	BaseClass.Sleep();
+    	miscmethods.file.ClickFile();
+    	BaseClass.Sleep();
+    	miscmethods.file.BasicUpload();
+    	BaseClass.Sleep();
+    	miscmethods.file.AdvUpload();
+    	BaseClass.Sleep();
+    	miscmethods.file.BasicDown();
     }
-}
+}//final end

@@ -5,7 +5,7 @@
     <classes>
       <class name="LeafTestCases.MisctestCases">
         <methods>
-          <include name="Atest"/>
+          <include name="ATtestFile"/>
           <include name="BeforeSuit"/>
         </methods>
       </class> <!-- LeafTestCases.MisctestCases -->

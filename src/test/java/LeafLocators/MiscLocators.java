@@ -11,11 +11,16 @@ public class MiscLocators {
 	public MiscLocator misclocator;
 	public Message message;
 	
-	
+	public File file;
+	public Chart chart;
+	public Video video;
 	
 	public MiscLocators() {
 		misclocator = new MiscLocator();
 		message = new Message();
+		file = new File();
+		chart = new Chart();
+		video = new Video();
 	
 	}
 	
@@ -85,17 +90,62 @@ public class MiscLocators {
 		
 		@FindBy(xpath="//span[normalize-space(text())='Submit']")
 		public WebElement InLineSubmit;
+		
+		@FindBy(xpath="//span[text()='First Name is required']")
+		public WebElement FirstNameVerify;
+		
+		@FindBy(xpath="//span[text()='Last Name is required']")
+		public WebElement LastNameVerify;
+		
+		@FindBy(xpath="//span[text()='Email is required']")
+		public WebElement EmailVerify;
 	} //end Message
 	
 	
+	public class File{
+		public File() {
+			PageFactory.initElements(BaseClass.driver, this);
+		}
+		
+		@FindBy(xpath="//a[contains(@href,'/file.xhtml')]") 
+		public WebElement ClickFile;
+		
+		
+		@FindBy(id="(//span[@class='ui-button-icon-left ui-icon ui-c ui-icon-plusthick'])[1]")
+		public WebElement BasicUpload;
+		
+		@FindBy(xpath="(//span[@class='ui-button-icon-left ui-icon ui-c ui-icon-plusthick'])[2]")
+		public WebElement AdvUpload;
+		
+		@FindBy(xpath="(//span[contains(@class,'ui-button-icon-left ui-icon')])[2]")
+		public WebElement BasicDown;
+		
+		
+	}//EndFile
+public class Video{
+		
+		public Video() {
+			 PageFactory.initElements(BaseClass.driver, this);
+		}
+		
+		@FindBy(xpath="//a[contains(@href,'/video.xhtml')]") 
+		public WebElement ClickVideo;
+	
+	}//endVideo
 	
 	
+public class Chart{
 	
+	public Chart() {
+		 PageFactory.initElements(BaseClass.driver, this);
+	}	
 	
+	@FindBy(xpath="//li[@id='menuform:m_chart']//a[1]")
+	public WebElement ClickChart;
 	
+	@FindBy(xpath="")
+	public WebElement ClickLineChart;
 	
-	
-	
-	
+	}//endofchart
 	
 }//end
