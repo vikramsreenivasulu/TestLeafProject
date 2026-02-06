@@ -1,5 +1,10 @@
 package LeafAction;
 
+import static org.testng.Assert.assertTrue;
+
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URL;
 import java.time.Duration;
 import java.util.List;
 
@@ -498,19 +503,20 @@ public class ElementMethods {
 		
 		
 		public void TriStateCheckBox() {
+			
+			   WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
 			while (true) {
-		        elementlocators.checkbox.TriStateCheckBox.click();
-
-		        WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
+		        
 		        WebElement stateElement = wait.until(
 		                ExpectedConditions.visibilityOf(elementlocators.checkbox.StateValue));
 
 		        String text = stateElement.getText();
 		        String value = text.split("=")[1].trim();
 		        System.out.println( value);
-		        if (value.equals("2")) {
+		        if (value.equals("0")) {
 		            break;
 		        }
+		        elementlocators.checkbox.TriStateCheckBox.click();
 		    }
 		
 		}
@@ -547,42 +553,86 @@ public class ElementMethods {
 		}
 		
 		public void BrokenLink() {
-			
-			String attribute = elementlocators.hyperlinks.BrokenLink.getAttribute("href");
-			System.out.println("Broken link is "+attribute);
-			
-			
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}//main Closing
 
+			WebElement link = elementlocators.hyperlinks.BrokenLink;
+			String href = link.getDomProperty("href");
+
+			try {
+//  Convert String → URL
+				URL url = new URI(href).toURL();
+
+//  Open connection
+				HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+				connection.connect();
+				System.out.println(connection.getResponseCode());
+
+				Assert.assertTrue(connection.getResponseCode() >= 400, "The Link is not Broken");
+
+			} catch (Exception e) {
+				System.out.println("Exception while checking link: " + e.getMessage());
+			}
+		}		
+//-----------------------------------------------------------
+			/*
+			   Links -
+				When we click on a link, the client request will go to the server.
+				Then it will fetch the resource and return it to client
+			Broken Links-
+				When the link we clicked dont have any resource on server side, then the link is broken link
+				Eg : Page not found, 404 error etc
+
+			Note - If the link is having resource in server, then the resource will be returned
+	   			If the link dont have no resource, then it will return a status code
+	   			We can find if the link is broken or not by the status code return
+	   			By analyzing the status code, we can find if the link is broken or not
+
+			Conditions for checking broken link
+				>A link should have href attribute and corresponding value (eg href = "https://abc.com") 
+				>Then the url will be hit with a request to server
+					Once we hit the server, it will return a status code
+				>If status code is greater than 400, then the link is broken
+			We need to repeat this step for all links to check if its broken or not
+			 */
+			
+
+			public void checkAllLinkStatus() {
+				
+				//  getting all the links into a variable    
+				List<WebElement> links = BaseClass.driver.findElements(By.tagName("a"));
+				// Total links
+				System.out.println(links.size());
+				// checking if href links has value
+				int brokenLinkCount = 0;
+				for (WebElement linkElement : links) {
+					String hrefAttribute = linkElement.getDomProperty("href"); // getAttribute() is deprecated
+
+					if (hrefAttribute == null || hrefAttribute.isEmpty()) { // checking if the hrefattrubute have value
+																			// or not
+						System.out.println("href attrubite is not available");
+						continue; // go to next iteration
+					}
+					// sending the request to server if the hrefattribute has value
+					// we need to convert the href value from string to URL
+					try {
+						URL linkUrl = new URI(hrefAttribute).toURL(); // URL url = new URL is deprecated
+						HttpURLConnection connectLinkURL = (HttpURLConnection) linkUrl.openConnection(); // open connection
+						connectLinkURL.connect(); // send request to server
+						//getting status code from the connectLinkURL
+						if (connectLinkURL.getResponseCode() >= 400) {
+							System.out.println(hrefAttribute + " is broken");
+							brokenLinkCount++;
+						} else
+							System.out.println(hrefAttribute + " is not a broken");
+					} catch (Exception e) { // catching all exceptions instead of URISyntaxException, IOException
+
+					}
+				}
+				System.out.println("Total broken Links " + brokenLinkCount);
+
+			}
+		}	
+
+	}// main Closing
 
 
 
