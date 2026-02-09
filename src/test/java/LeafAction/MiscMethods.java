@@ -1,5 +1,11 @@
 package LeafAction;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -142,14 +148,19 @@ public class MiscMethods {
     
     public class File{
     	
-    	public void ClickFile() {
+    	public void ClickFile() throws AWTException {
     		JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
     		WebElement clickFile = misclocators.file.ClickFile;
     		js.executeScript("arguments[0].click();", clickFile);
+    		
+    		
+    		
     	}
     	
-    	public void BasicUpload() {
+    	public void BasicUpload() throws AWTException {
     		misclocators.file.BasicUpload.click();
+    
+    		
     	}
     	
     	public void AdvUpload() {

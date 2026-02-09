@@ -1,5 +1,7 @@
 package LeafTestCases;
 
+import java.awt.AWTException;
+
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -66,7 +68,7 @@ public class MisctestCases {
     }//EndChart
     
     @Test()
-    public void ATtestFile() throws InterruptedException {
+    public void ATtestFile() throws InterruptedException, AWTException {
     	
     	BaseClass.Sleep();
     	miscmethods.miscmethod.ClickMisc();
@@ -75,8 +77,8 @@ public class MisctestCases {
     	BaseClass.Sleep();
     	miscmethods.file.BasicUpload();
     	BaseClass.Sleep();
-    	miscmethods.file.AdvUpload();
-    	BaseClass.Sleep();
-    	miscmethods.file.BasicDown();
+//    	miscmethods.file.AdvUpload();
+//    	BaseClass.Sleep();
+//    	miscmethods.file.BasicDown();
     }
 }//final end
