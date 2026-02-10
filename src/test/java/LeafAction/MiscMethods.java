@@ -169,13 +169,14 @@ public class MiscMethods {
     		
     	}
     	
-    	public void AdvUpload() {
+    	public void AdvUpload() throws InterruptedException {
     		
     		String fileName1 = "TestLeaf Logo.png";
     		String fileName2 = "TestLeaf Logo2.png";
+    		BaseClass.Sleep();
     		
     		misclocators.file.AdvUpload.sendKeys("D:\\TestFolder\\" + fileName1 + "\n" +"D:\\TestFolder\\" + fileName2);
-    		
+    		BaseClass.Sleep();
     		misclocators.file.Upload.click();
     		
     		boolean Successdisplayed = misclocators.file.SuccessFullyUpload.isDisplayed();
