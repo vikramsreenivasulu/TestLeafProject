@@ -111,11 +111,17 @@ public class MiscLocators {
 		public WebElement ClickFile;
 		
 		
-		@FindBy(id="j_idt88") 
+		@FindBy(xpath="//input[@id='j_idt88:j_idt89_input']") 
 		public WebElement BasicUpload;
 		
-		@FindBy(xpath="(//span[@class='ui-button-icon-left ui-icon ui-c ui-icon-plusthick'])[2]")
+		@FindBy(xpath="//input[@id='j_idt97:j_idt98_input']")
 		public WebElement AdvUpload;
+		
+		@FindBy(xpath="//span[normalize-space(text())='Upload']")
+		public WebElement Upload;
+		
+		@FindBy(xpath="//span[normalize-space(text())='Successful']")
+		public WebElement SuccessFullyUpload;
 		
 		@FindBy(xpath="(//span[contains(@class,'ui-button-icon-left ui-icon')])[2]")
 		public WebElement BasicDown;

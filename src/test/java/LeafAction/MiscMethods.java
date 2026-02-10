@@ -158,13 +158,29 @@ public class MiscMethods {
     	}
     	
     	public void BasicUpload() throws AWTException {
-    		misclocators.file.BasicUpload.click();
+    		
+    		
+    		String fileName = "TestLeaf Logo.png";
+
+    		//singleFileInput.sendKeys("D:\\TestFolder\\".concat(fileName));
+    		
+    		misclocators.file.BasicUpload.sendKeys("D:\\TestFolder\\".concat(fileName));
     
     		
     	}
     	
     	public void AdvUpload() {
-    		misclocators.file.AdvUpload.click();
+    		
+    		String fileName1 = "TestLeaf Logo.png";
+    		String fileName2 = "TestLeaf Logo2.png";
+    		
+    		misclocators.file.AdvUpload.sendKeys("D:\\TestFolder\\" + fileName1 + "\n" +"D:\\TestFolder\\" + fileName2);
+    		
+    		misclocators.file.Upload.click();
+    		
+    		boolean Successdisplayed = misclocators.file.SuccessFullyUpload.isDisplayed();
+    		Assert.assertTrue(Successdisplayed, "is not showing");
+    		
     	}
     	
     	public void BasicDown() {

@@ -48,6 +48,26 @@ public class MisctestCases {
     	miscmethods.message.InLineSubject(); 	
     }//end Misc
     
+    
+    
+    
+    @Test()
+    public void ATtestFile() throws InterruptedException, AWTException {
+    	
+    	BaseClass.Sleep();
+    	miscmethods.miscmethod.ClickMisc();
+    	BaseClass.Sleep();
+    	miscmethods.file.ClickFile();
+    	BaseClass.Sleep();
+    	miscmethods.file.BasicUpload();
+    	BaseClass.Sleep();
+    	miscmethods.file.AdvUpload();
+    	BaseClass.Sleep();
+    	miscmethods.file.BasicDown();
+    }
+    
+    
+    
     @Test()
     public void AtTestVideo() throws InterruptedException {	
     	BaseClass.Sleep();
@@ -67,18 +87,5 @@ public class MisctestCases {
     	miscmethods.chart.ClickChart(); 	
     }//EndChart
     
-    @Test()
-    public void ATtestFile() throws InterruptedException, AWTException {
-    	
-    	BaseClass.Sleep();
-    	miscmethods.miscmethod.ClickMisc();
-    	BaseClass.Sleep();
-    	miscmethods.file.ClickFile();
-    	BaseClass.Sleep();
-    	miscmethods.file.BasicUpload();
-    	BaseClass.Sleep();
-//    	miscmethods.file.AdvUpload();
-//    	BaseClass.Sleep();
-//    	miscmethods.file.BasicDown();
-    }
+
 }//final end
