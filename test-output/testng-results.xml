@@ -2,16 +2,16 @@
 <testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-10T17:53:51 IST" name="Default suite" finished-at="2026-02-10T17:54:56 IST" duration-ms="64522">
+  <suite started-at="2026-02-11T17:15:38 IST" name="Default suite" finished-at="2026-02-11T17:16:42 IST" duration-ms="64721">
     <groups>
     </groups>
-    <test started-at="2026-02-10T17:53:51 IST" name="Default test" finished-at="2026-02-10T17:54:56 IST" duration-ms="64522">
+    <test started-at="2026-02-11T17:15:38 IST" name="Default test" finished-at="2026-02-11T17:16:42 IST" duration-ms="64721">
       <class name="LeafTestCases.TableTestClases">
-        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:LeafTestCases.TableTestClases@6025e1b6]" started-at="2026-02-10T17:53:46 IST" name="BeforeSuit" finished-at="2026-02-10T17:53:51 IST" duration-ms="5040" status="PASS">
+        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:LeafTestCases.TableTestClases@6025e1b6]" started-at="2026-02-11T17:15:34 IST" name="BeforeSuit" finished-at="2026-02-11T17:15:38 IST" duration-ms="3821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuit -->
-        <test-method signature="ATTestGrid()[pri:0, instance:LeafTestCases.TableTestClases@6025e1b6]" started-at="2026-02-10T17:53:51 IST" name="ATTestGrid" finished-at="2026-02-10T17:54:56 IST" duration-ms="64485" status="FAIL">
+        <test-method signature="ATTestGrid()[pri:0, instance:LeafTestCases.TableTestClases@6025e1b6]" started-at="2026-02-11T17:15:38 IST" name="ATTestGrid" finished-at="2026-02-11T17:16:42 IST" duration-ms="64667" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
@@ -19,10 +19,10 @@
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bae8680b214f0e75046b9a52ba6bb9f8, sendKeysToElement {value=[Ljava.lang.CharSequence;@664a9613, id=f.37A0AAD581F52CCB92475F8EC651E73C.d.E0F5A05712073BB9A97D0132E6A2E3DD.e.4470}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\VIKRAM~1.SRE\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62015}, goog:processID: 10912, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62015/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (bae8680b214f0e75046b9a52ba6bb9f8)] -> xpath: //input[contains(@class,'ui-spinner-input ui-inputfield')]]
-Session ID: bae8680b214f0e75046b9a52ba6bb9f8]]>
+Command: [70870368d23ddce7b4b0d8f9d5fc5ada, sendKeysToElement {value=[Ljava.lang.CharSequence;@4a3e3e8b, id=f.42EF1AA55C4426D0DF40551F4DEEF3F4.d.78090210AAF70B5D1FF4D31E4C62920D.e.4049}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\VIKRAM~1.SRE\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56394}, goog:processID: 21136, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56394/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (70870368d23ddce7b4b0d8f9d5fc5ada)] -> xpath: //input[contains(@class,'ui-spinner-input ui-inputfield')]]
+Session ID: 70870368d23ddce7b4b0d8f9d5fc5ada]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
@@ -30,10 +30,10 @@ Session ID: bae8680b214f0e75046b9a52ba6bb9f8]]>
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bae8680b214f0e75046b9a52ba6bb9f8, sendKeysToElement {value=[Ljava.lang.CharSequence;@664a9613, id=f.37A0AAD581F52CCB92475F8EC651E73C.d.E0F5A05712073BB9A97D0132E6A2E3DD.e.4470}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\VIKRAM~1.SRE\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62015}, goog:processID: 10912, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62015/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (bae8680b214f0e75046b9a52ba6bb9f8)] -> xpath: //input[contains(@class,'ui-spinner-input ui-inputfield')]]
-Session ID: bae8680b214f0e75046b9a52ba6bb9f8
+Command: [70870368d23ddce7b4b0d8f9d5fc5ada, sendKeysToElement {value=[Ljava.lang.CharSequence;@4a3e3e8b, id=f.42EF1AA55C4426D0DF40551F4DEEF3F4.d.78090210AAF70B5D1FF4D31E4C62920D.e.4049}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\VIKRAM~1.SRE\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56394}, goog:processID: 21136, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56394/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (70870368d23ddce7b4b0d8f9d5fc5ada)] -> xpath: //input[contains(@class,'ui-spinner-input ui-inputfield')]]
+Session ID: 70870368d23ddce7b4b0d8f9d5fc5ada
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -50,7 +50,7 @@ at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethod
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at jdk.proxy2/jdk.proxy2.$Proxy11.sendKeys(Unknown Source)
-at LeafAction.TableMethods$Grid.Re_EditQuantity(TableMethods.java:92)
+at LeafAction.TableMethods$Grid.Re_EditQuantity(TableMethods.java:96)
 at LeafTestCases.TableTestClases.ATTestGrid(TableTestClases.java:57)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)

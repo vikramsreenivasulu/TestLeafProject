@@ -77,7 +77,7 @@ public class TableLocators {
 		@FindBy(xpath="(//input[contains(@class,'ui-inputfield ui-inputtext')])[1]")
 		public WebElement Search;
 		
-		@FindBy(xpath="//button[@name='form:dt-products:0:j_idt114']//span[1]")
+		@FindBy(xpath="//button[@id='form:dt-products:0:j_idt114' or @name='form:dt-products:0:j_idt114']")
 		public WebElement ProductEdit;
 		
 		@FindBy(xpath="//input[contains(@class,'ui-spinner-input ui-inputfield')]")

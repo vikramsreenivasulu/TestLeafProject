@@ -67,8 +67,8 @@ public class TableMethods {
 			WebElement price = tablelocators.grid.Price;	
 			price.click();
 			price.clear();
-			price.sendKeys(Price);
-	//		((JavascriptExecutor) BaseClass.driver).executeScript("arguments[0].value='" + Price + "';", price);
+			//price.sendKeys(Price);
+			((JavascriptExecutor) BaseClass.driver).executeScript("arguments[0].value='" + Price + "';", price);
 		}
 		
 		public void ProductQuantity(String Quantity) {
@@ -85,7 +85,11 @@ public class TableMethods {
 		}
 		
 		public void ProductEdit() {
-			tablelocators.grid.ProductEdit.click();
+			
+			JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+			WebElement productEditClick = tablelocators.grid.ProductEdit;
+			js.executeScript("arguments[0].click();", productEditClick);
+			
 		}
 		
 		public void Re_EditQuantity(String Quantity) {
