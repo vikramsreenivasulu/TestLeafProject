@@ -177,4 +177,10 @@ public class BaseClass {
 		driver.quit();
 	}
 	
+	public static WebElement getTableRow(WebElement table, String value) {
+
+		WebElement row = table.findElement(By.xpath("//tbody//tr[td[contains(.,'" + value + "')]]"));
+		return row;
+	}
+	
 }

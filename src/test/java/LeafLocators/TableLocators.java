@@ -74,11 +74,18 @@ public class TableLocators {
 		@FindBy(xpath="//span[normalize-space(text())='Save']")
 		public WebElement ProductSave;
 		
+		@FindBy(xpath="//span[normalize-space(text())='Product Added']")
+		public WebElement ProductAdded;
+		
 		@FindBy(xpath="(//input[contains(@class,'ui-inputfield ui-inputtext')])[1]")
 		public WebElement Search;
 		
-		@FindBy(xpath="//button[@id='form:dt-products:0:j_idt114' or @name='form:dt-products:0:j_idt114']")
+		@FindBy(xpath="//button[@id='form:dt-products:0:j_idt114']")     
+
 		public WebElement ProductEdit;
+		
+		@FindBy(xpath="//input[@id='form:price_input']")
+		public WebElement Re_Price;
 		
 		@FindBy(xpath="//input[contains(@class,'ui-spinner-input ui-inputfield')]")
 		public WebElement Re_EditQuantity;
@@ -86,6 +93,20 @@ public class TableLocators {
 		@FindBy(xpath="//span[normalize-space(text())='Save']")
 		public WebElement Re_EditSave;
 		
+		@FindBy(xpath="//table[contains(.,'Name')]")
+		public WebElement GridTable;
+		
+		@FindBy(xpath="//div[@class='ui-chkbox ui-widget']")
+		public WebElement checkBox; 
+		
+		@FindBy(xpath="(//button[contains(@class,'ui-button ui-widget')])[2]")
+		public WebElement DeleteProduct;
+		
+		@FindBy(xpath="(//button[@name='form:j_idt159']//span)[2]")
+		public WebElement DeleteYes;
+		
+		@FindBy(xpath="//span[normalize-space(text())='Selected Product(s) Deleted']")
+		public WebElement VerifyDelete;
 	}//endgrid
 	
 	

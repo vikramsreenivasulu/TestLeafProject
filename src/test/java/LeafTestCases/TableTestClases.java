@@ -54,10 +54,19 @@ public class TableTestClases {
 	    	BaseClass.Sleep();
 	    	tablemethods.grid.Search("Redtape Sneaker");
 	    	BaseClass.Sleep();
+	    	tablemethods.grid.ProductEdit("Redtape Sneaker");
+	    	BaseClass.Sleep();
+	    	tablemethods.grid.Re_Price("1500");
+	    	BaseClass.Sleep();
 	    	tablemethods.grid.Re_EditQuantity("2");
 	    	BaseClass.Sleep();
 	    	tablemethods.grid.Re_EditSave();
-	    	
+	    	BaseClass.Sleep();
+	    	tablemethods.grid.ClickCheckBox("Redtape Sneaker");
+	    	BaseClass.Sleep();
+	    	tablemethods.grid.DeleteProduct();
+	    	BaseClass.Sleep();
+	    	tablemethods.grid.DeleteYes();
 	    }
 	    
 	    
