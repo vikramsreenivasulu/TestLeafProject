@@ -1,5 +1,6 @@
 package LeafTestCases;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -63,6 +64,12 @@ public class TableTestClases {
 	    	tablemethods.grid.Re_EditSave();
 	    	BaseClass.Sleep();
 	    	tablemethods.grid.ClickCheckBox("Redtape Sneaker");
+	    	BaseClass.Sleep();
+	    	tablemethods.grid.Import();
+	    	BaseClass.Sleep();
+	    	tablemethods.grid.Export();
+	    	BaseClass.Sleep();
+	    	//BaseClass.clickAfterPopupGone(By.xpath("//span[normalize-space(text())='Product Added']"), By.xpath("//input[@id='form:j_idt92_input']"));
 	    	BaseClass.Sleep();
 	    	tablemethods.grid.DeleteProduct();
 	    	BaseClass.Sleep();

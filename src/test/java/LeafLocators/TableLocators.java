@@ -99,6 +99,12 @@ public class TableLocators {
 		@FindBy(xpath="//div[@class='ui-chkbox ui-widget']")
 		public WebElement checkBox; 
 		
+		@FindBy(xpath="//input[@id='form:j_idt92_input']")
+		public WebElement Import;
+		
+		@FindBy(xpath="//span[normalize-space(text())='Export']")
+		public WebElement Export;
+		
 		@FindBy(xpath="(//button[contains(@class,'ui-button ui-widget')])[2]")
 		public WebElement DeleteProduct;
 		
@@ -107,6 +113,8 @@ public class TableLocators {
 		
 		@FindBy(xpath="//span[normalize-space(text())='Selected Product(s) Deleted']")
 		public WebElement VerifyDelete;
+		
+		
 	}//endgrid
 	
 	

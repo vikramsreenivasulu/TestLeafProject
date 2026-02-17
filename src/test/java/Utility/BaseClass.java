@@ -20,6 +20,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
@@ -182,5 +184,31 @@ public class BaseClass {
 		WebElement row = table.findElement(By.xpath("//tbody//tr[td[contains(.,'" + value + "')]]"));
 		return row;
 	}
+	
+	public static void clickAfterPopupGone(By popupLocator, By buttonLocator) {
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+	    try {
+	        // Wait until popup disappears (if present)
+	        wait.until(ExpectedConditions.invisibilityOfElementLocated(popupLocator));
+	    } catch (Exception e) {
+	        System.out.println("Popup not visible or already closed");
+	    }
+
+	    // Retry click logic
+	    int attempts = 0;
+	    while (attempts < 3) {
+	        try {
+	            WebElement button = wait.until(ExpectedConditions.elementToBeClickable(buttonLocator));
+	            button.click();
+	            break; // success
+	        } catch (Exception e) {
+	            attempts++;
+	            System.out.println("Retrying click... Attempt: " + attempts);
+	        }
+	    }
+	}
+
 	
 }

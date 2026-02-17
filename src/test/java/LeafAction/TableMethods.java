@@ -116,6 +116,7 @@ public class TableMethods {
 			tablelocators.grid.Re_EditQuantity.sendKeys(Quantity);
 		}
 		
+		
 		public void Re_EditSave() {
 			tablelocators.grid.Re_EditSave.click();
 		}
@@ -126,6 +127,14 @@ public class TableMethods {
 			clickcheckbox.findElement(By.xpath(".//div[@class='ui-chkbox ui-widget']")).click();
 		}
 		
+		public void Import() {
+			String FileName = "redtape sneakers.png";
+			tablelocators.grid.Import.sendKeys("D:\\leafground\\".concat(FileName));
+		}
+		
+		public void Export() {
+			tablelocators.grid.Export.click();
+		}
 		public void DeleteProduct() {
 			tablelocators.grid.DeleteProduct.click();
 		}

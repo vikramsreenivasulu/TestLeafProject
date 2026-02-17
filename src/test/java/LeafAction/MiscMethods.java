@@ -167,6 +167,7 @@ public class MiscMethods {
     		misclocators.file.BasicUpload.sendKeys("D:\\TestFolder\\".concat(fileName));
     
     		
+    		
     	}
     	
     	public void AdvUpload() throws InterruptedException {
