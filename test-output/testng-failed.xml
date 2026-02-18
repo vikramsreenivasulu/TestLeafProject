@@ -5,8 +5,8 @@
     <classes>
       <class name="LeafTestCases.TableTestClases">
         <methods>
-          <include name="ATTestGrid"/>
           <include name="BeforeSuit"/>
+          <include name="ATTestDynamicGrid"/>
         </methods>
       </class> <!-- LeafTestCases.TableTestClases -->
     </classes>

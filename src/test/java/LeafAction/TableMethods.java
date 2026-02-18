@@ -1,5 +1,7 @@
 package LeafAction;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -16,12 +18,15 @@ public class TableMethods {
 	public InsideTable insidetable;
 	
 	public Grid grid;
+	
+	public DynamicGrid dynamicgrid;
 	public TableLocators tablelocators = new TableLocators();
 	
 	public TableMethods() {
 		tablemethod = new TableMethod();
 		insidetable = new InsideTable();
 		grid     = new Grid();
+		dynamicgrid = new DynamicGrid();
 	}
 	
 	public class TableMethod{
@@ -147,5 +152,89 @@ public class TableMethods {
 			Assert.assertTrue(verifydelete, "is not deleted");
 		}
 	}//endGrid
+	
+	public class DynamicGrid{
+		
+		public void ClickDyGrid() {
+			tablelocators.dynamicgrid.ClickDyGrid.click();
+		}
+		
+		public void Search(String search) {
+			tablelocators.dynamicgrid.Search.clear();
+			tablelocators.dynamicgrid.Search.sendKeys(search);
+		}
+		
+		public void ValueFromCells() {
+			String text = tablelocators.dynamicgrid.ValueFromCells.getText();
+			System.out.println(text);
+		}
+		
+		
+		public void ValueFromNameColumn() {
+			WebElement Names = tablelocators.dynamicgrid.Table;
+			
+			List<WebElement> elements = Names.findElements(By.xpath(".//tbody//tr//td[1]"));
+			
+			for (WebElement webElement : elements) {
+				String text = webElement.getText();
+				System.out.println("Name:"+text);
+
+			}
+			
+		}
+		
+		public void ValueFromDateColumn() {
+			
+			WebElement Dates = tablelocators.dynamicgrid.Table;
+			
+		List<WebElement> elements = Dates.findElements(By.xpath(".//tbody//tr//td[2]"));
+		
+			for (WebElement webElement : elements) {
+				String text = webElement.getText();
+				System.out.println("Date:"+text);
+			}
+		}
+		
+		
+		
+		public void ValueFromStatusColumn() {
+			
+			WebElement Status = tablelocators.dynamicgrid.Table;
+			
+			List<WebElement> elements = Status.findElements(By.xpath(".//tr//td[3]"));
+			
+			for (WebElement webElement : elements) {
+				
+				String text = webElement.getText();
+				System.out.println("Status:"+text);
+			}
+		}
+		
+		public void ValueFromActivityColumn() {
+			
+			WebElement Activity = tablelocators.dynamicgrid.Table;
+			
+			List<WebElement> elements = Activity.findElements(By.xpath(".//tr//td[3]"));
+			
+			for (WebElement webElement : elements) {
+				
+				String text = webElement.getText();
+				System.out.println("Activity:"+text);
+			}
+		}
+		
+		
+		
+		
+		
+		
+	}//DynamicGrid
+	
+	
+	
+	
+	
+	
+	
 	
 }//End TableMethods

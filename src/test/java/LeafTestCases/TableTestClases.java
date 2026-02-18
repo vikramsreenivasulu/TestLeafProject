@@ -77,8 +77,39 @@ public class TableTestClases {
 	    }
 	    
 	    
-	    
-	    
+	    @Test()
+	    public void ATTestDynamicGrid() throws InterruptedException {
+	    	
+	    	BaseClass.Sleep();
+	    	tablemethods.tablemethod.ClickTable();
+	    	BaseClass.Sleep();
+	    	tablemethods.dynamicgrid.ClickDyGrid();
+	    	BaseClass.Sleep();
+	    	tablemethods.dynamicgrid.Search("Steven Smith");
+	    	BaseClass.Sleep();
+	    	tablemethods.dynamicgrid.ValueFromCells();
+	    	BaseClass.Sleep();
+	    	System.out.println("...................................");
+	    	System.out.println("               Names");
+	    	tablemethods.dynamicgrid.ValueFromNameColumn();
+	    	
+	    	BaseClass.Sleep();
+	    	System.out.println("...................................");
+	    	System.out.println("                Dates");
+	    	tablemethods.dynamicgrid.ValueFromDateColumn();
+	    	
+	    	BaseClass.Sleep();
+	    	System.out.println("...................................");
+	    	System.out.println("                Status");
+	    	tablemethods.dynamicgrid.ValueFromStatusColumn();
+	    	
+	    	BaseClass.Sleep();
+	    	System.out.println("...................................");
+	    	System.out.println("                Activity");
+	    	tablemethods.dynamicgrid.ValueFromActivityColumn();
+	    	
+	    	
+	    }
 	    
 	    
 	    

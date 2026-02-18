@@ -14,12 +14,13 @@ public class TableLocators {
 	
 	public Grid grid;
 	
+	public DynamicGrid dynamicgrid;
 	public  TableLocators(){
 		
 		tablelocator= new TableLocator();
 		insidetable = new InsideTable();
 		grid = new Grid();
-		
+		dynamicgrid = new DynamicGrid();
 	}
 	
 	public class TableLocator{
@@ -117,7 +118,29 @@ public class TableLocators {
 		
 	}//endgrid
 	
-	
+	public class DynamicGrid{
+		
+		public DynamicGrid() {
+			PageFactory.initElements(BaseClass.driver, this);
+		}
+		
+		@FindBy(id="menuform:m_dynamic")
+		public WebElement ClickDyGrid;
+		
+		@FindBy(id="form:template")
+		public WebElement Search;
+		
+		@FindBy(xpath="//tbody[@id='form:customers_data']//tr[contains(@role,'row')]//td[contains(@role,'')]")
+		
+		//tbody[@id='form:customers_data']//tr/td[3]
+		public WebElement ValueFromCells;
+		
+		
+		@FindBy(xpath ="//table[contains(.,'NAME')]")
+		public WebElement Table;
+		
+		
+	}
 	
 	
 	
