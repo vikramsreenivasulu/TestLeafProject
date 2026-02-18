@@ -1,5 +1,6 @@
 package LeafAction;
 
+import java.util.Calendar;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -20,6 +21,8 @@ public class TableMethods {
 	public Grid grid;
 	
 	public DynamicGrid dynamicgrid;
+	
+	public Calendar calendar;
 	public TableLocators tablelocators = new TableLocators();
 	
 	public TableMethods() {
@@ -27,6 +30,7 @@ public class TableMethods {
 		insidetable = new InsideTable();
 		grid     = new Grid();
 		dynamicgrid = new DynamicGrid();
+		calendar = new Calendar();
 	}
 	
 	public class TableMethod{
@@ -171,24 +175,31 @@ public class TableMethods {
 		
 		
 		public void ValueFromNameColumn() {
+			
+			
+			WebElement tableHeadName1 = tablelocators.dynamicgrid.TableHeadNames;
+			WebElement element = tableHeadName1.findElement(By.xpath(".//tr//th[1]"));
+			String name = element.getText();
+			System.out.println("               "+name);
+			
 			WebElement Names = tablelocators.dynamicgrid.Table;
-			
 			List<WebElement> elements = Names.findElements(By.xpath(".//tbody//tr//td[1]"));
-			
 			for (WebElement webElement : elements) {
 				String text = webElement.getText();
 				System.out.println("Name:"+text);
-
-			}
+			} 
 			
 		}
 		
 		public void ValueFromDateColumn() {
 			
-			WebElement Dates = tablelocators.dynamicgrid.Table;
+			WebElement tableHeadDate1 = tablelocators.dynamicgrid.TableHeadNames;
+			WebElement element = tableHeadDate1.findElement(By.xpath(".//tr//th[2]"));
+			String date = element.getText();
+			System.out.println("               "+date);
 			
+			WebElement Dates = tablelocators.dynamicgrid.Table;
 		List<WebElement> elements = Dates.findElements(By.xpath(".//tbody//tr//td[2]"));
-		
 			for (WebElement webElement : elements) {
 				String text = webElement.getText();
 				System.out.println("Date:"+text);
@@ -199,12 +210,14 @@ public class TableMethods {
 		
 		public void ValueFromStatusColumn() {
 			
+			WebElement tableHeadStatus1 = tablelocators.dynamicgrid.TableHeadNames;
+			WebElement element = tableHeadStatus1.findElement(By.xpath(".//tr//th[3]"));
+			String status = element.getText();
+			System.out.println("               "+status);
+			
 			WebElement Status = tablelocators.dynamicgrid.Table;
-			
 			List<WebElement> elements = Status.findElements(By.xpath(".//tr//td[3]"));
-			
 			for (WebElement webElement : elements) {
-				
 				String text = webElement.getText();
 				System.out.println("Status:"+text);
 			}
@@ -212,26 +225,56 @@ public class TableMethods {
 		
 		public void ValueFromActivityColumn() {
 			
+			WebElement tableHeadActivity1 = tablelocators.dynamicgrid.TableHeadNames;
+			WebElement element = tableHeadActivity1.findElement(By.xpath(".//tr//th[4]"));
+			String activity = element.getText();
+			System.out.println("               "+activity);
+			
+			
 			WebElement Activity = tablelocators.dynamicgrid.Table;
-			
-			List<WebElement> elements = Activity.findElements(By.xpath(".//tr//td[3]"));
-			
+			List<WebElement> elements = Activity.findElements(By.xpath(".//tr//td[4]"));
 			for (WebElement webElement : elements) {
-				
 				String text = webElement.getText();
 				System.out.println("Activity:"+text);
 			}
 		}
 		
-		
-		
-		
-		
-		
 	}//DynamicGrid
 	
 	
-	
+	public class Calendar{
+		
+		public void ClickCalender() {
+			
+			tablelocators.calendar.ClickCalendar.click();
+		}
+		
+		
+		public void ClickPrevious(String date) {
+			tablelocators.calendar.ClickPrevious.click();
+			
+			BaseClass.driver.findElement(By.xpath("//td[@data-date='"+date+"']")).click();
+			
+		}
+		
+		public void SendTitle(String title) {
+			
+			tablelocators.calendar.eventdetails.SendTitle.sendKeys(title);
+			
+			//Clicking the AllDays button
+			tablelocators.calendar.eventdetails.AllDays.click();
+			
+			//Clicking the Save Button
+			tablelocators.calendar.eventdetails.Save.click();
+			
+			//Verifying the texting
+			String text = tablelocators.calendar.eventdetails.VerifyOnTheDay.getText();
+			System.out.println("Retrive_Value"+text);
+			Assert.assertEquals(text, "Sankranthi", "Testfailed");
+		}
+		
+		
+	}//Calendar
 	
 	
 	

@@ -15,12 +15,15 @@ public class TableLocators {
 	public Grid grid;
 	
 	public DynamicGrid dynamicgrid;
+	
+	public Calendar calendar;
 	public  TableLocators(){
 		
 		tablelocator= new TableLocator();
 		insidetable = new InsideTable();
 		grid = new Grid();
 		dynamicgrid = new DynamicGrid();
+		calendar = new Calendar();
 	}
 	
 	public class TableLocator{
@@ -139,9 +142,51 @@ public class TableLocators {
 		@FindBy(xpath ="//table[contains(.,'NAME')]")
 		public WebElement Table;
 		
+		@FindBy(xpath="//table//thead")
+		public WebElement TableHeadNames;
+		
 		
 	}
 	
+	public class Calendar{
+		
+		public EventDetails eventdetails;
+		
+		public Calendar() {
+			PageFactory.initElements(BaseClass.driver, this);
+			eventdetails = new EventDetails();
+		}
+		
+		@FindBy(xpath="//li[@id='menuform:m_calendar']//a[1]")
+		public WebElement ClickCalendar;
+		
+		@FindBy(xpath="//button[text()='Previous']")
+		public WebElement ClickPrevious;
+		
+		
+		
+		public class EventDetails{
+			public EventDetails(){
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath="//input[@id='j_idt87:title']")
+			public WebElement SendTitle;
+			
+			@FindBy(xpath="//div[contains(@class,'ui-chkbox-box ui-widget')]")
+			public WebElement AllDays;
+			
+			@FindBy(xpath="//span[normalize-space(text())='Save']")
+			public WebElement Save;
+			
+			@FindBy(xpath="//div[contains(@class,'fc-event-title')]")
+			public WebElement VerifyOnTheDay;
+			
+		}//EventDetails End
+		
+		
+		
+	}//calendar end
 	
 	
 }//Mainend

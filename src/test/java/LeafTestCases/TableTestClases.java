@@ -1,6 +1,5 @@
 package LeafTestCases;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -87,32 +86,40 @@ public class TableTestClases {
 	    	BaseClass.Sleep();
 	    	tablemethods.dynamicgrid.Search("Steven Smith");
 	    	BaseClass.Sleep();
-	    	tablemethods.dynamicgrid.ValueFromCells();
+	    	//tablemethods.dynamicgrid.ValueFromCells();
 	    	BaseClass.Sleep();
 	    	System.out.println("...................................");
-	    	System.out.println("               Names");
 	    	tablemethods.dynamicgrid.ValueFromNameColumn();
 	    	
 	    	BaseClass.Sleep();
 	    	System.out.println("...................................");
-	    	System.out.println("                Dates");
 	    	tablemethods.dynamicgrid.ValueFromDateColumn();
 	    	
 	    	BaseClass.Sleep();
 	    	System.out.println("...................................");
-	    	System.out.println("                Status");
 	    	tablemethods.dynamicgrid.ValueFromStatusColumn();
 	    	
 	    	BaseClass.Sleep();
 	    	System.out.println("...................................");
-	    	System.out.println("                Activity");
 	    	tablemethods.dynamicgrid.ValueFromActivityColumn();
 	    	
 	    	
 	    }
 	    
 	    
-	    
+	    @Test()
+	    public void AtTestCalendar() throws InterruptedException {
+	    	
+	    	BaseClass.Sleep();
+	    	tablemethods.tablemethod.ClickTable();
+	    	BaseClass.Sleep();
+	    	tablemethods.calendar.ClickCalender();
+	    	BaseClass.Sleep();
+	    	tablemethods.calendar.ClickPrevious("2026-01-14");
+	    	BaseClass.Sleep();
+	    	tablemethods.calendar.SendTitle("Sankranthi");
+	    	BaseClass.Sleep();
+	    }
 	    
 	    
 	    
