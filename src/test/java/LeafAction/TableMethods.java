@@ -1,6 +1,5 @@
 package LeafAction;
 
-import java.util.Calendar;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -257,7 +256,7 @@ public class TableMethods {
 			
 		}
 		
-		public void SendTitle(String title) {
+		public void EventDetails(String title) {
 			
 			tablelocators.calendar.eventdetails.SendTitle.sendKeys(title);
 			
