@@ -150,11 +150,16 @@ public class TableLocators {
 	
 	public class Calendar{
 		
-		public EventDetails eventdetails;
+		public JanEventDetails janeventdetails;
 		
+		public FebEventDetails febeventdetails;
+		public MarEventDetails mareventdetails;
 		public Calendar() {
 			PageFactory.initElements(BaseClass.driver, this);
-			eventdetails = new EventDetails();
+			janeventdetails = new JanEventDetails();
+			febeventdetails = new FebEventDetails();
+			mareventdetails = new MarEventDetails();
+			
 		}
 		
 		@FindBy(xpath="//li[@id='menuform:m_calendar']//a[1]")
@@ -165,26 +170,70 @@ public class TableLocators {
 		
 		
 		
-		public class EventDetails{
-			public EventDetails(){
-				PageFactory.initElements(BaseClass.driver, this);
-			}
-			
-			@FindBy(xpath="//input[@id='j_idt87:title']")
-			public WebElement SendTitle;
-			
-			@FindBy(xpath="//div[contains(@class,'ui-chkbox-box ui-widget')]")
-			public WebElement AllDays;
-			
-			@FindBy(xpath="//span[normalize-space(text())='Save']")
-			public WebElement Save;
-			
-			@FindBy(xpath="//div[contains(@class,'fc-event-title')]")
-			public WebElement VerifyOnTheDay;
-			
-		}//EventDetails End
+									public class JanEventDetails{
+										public JanEventDetails(){
+											PageFactory.initElements(BaseClass.driver, this);
+										}
+										
+										@FindBy(xpath="//input[@id='j_idt87:title']")
+										public WebElement SendTitle;
+										
+										@FindBy(xpath="//div[contains(@class,'ui-chkbox-box ui-widget')]")
+										public WebElement AllDays;
+										
+										@FindBy(xpath="//span[normalize-space(text())='Save']")
+										public WebElement Save;
+										
+										@FindBy(xpath="//div[contains(@class,'fc-event-title')]")
+										public WebElement VerifyOnTheDay;
+										
+									}//EventDetails End
 		
+		@FindBy(xpath="//button[contains(@class,'fc-today-button fc-button')]")
+		public WebElement Currentdate;
 		
+								public class FebEventDetails{
+									
+									public FebEventDetails(){
+										PageFactory.initElements(BaseClass.driver, this);
+									}
+									
+									@FindBy(xpath="//input[@id='j_idt87:title']")
+									public WebElement SendTitle;
+									
+									@FindBy(xpath="//div[contains(@class,'ui-chkbox-box ui-widget')]")
+									public WebElement AllDays;
+									
+									@FindBy(xpath="//span[normalize-space(text())='Save']")
+									public WebElement Save;
+									
+									@FindBy(xpath="//div[contains(@class,'fc-event-title')]")
+									public WebElement VerifyOnTheDay;
+									
+								}
+								
+		@FindBy(xpath="//button[contains(@class,'fc-next-button fc-button')]")
+		public WebElement NxtMonth;
+		
+									public class MarEventDetails{
+										
+										public MarEventDetails(){
+											PageFactory.initElements(BaseClass.driver, this);
+										}
+										
+										@FindBy(xpath="//input[@id='j_idt87:title']")
+										public WebElement SendTitle;
+										
+										@FindBy(xpath="//div[contains(@class,'ui-chkbox-box ui-widget')]")
+										public WebElement AllDays;
+										
+										@FindBy(xpath="//span[normalize-space(text())='Save']")
+										public WebElement Save;
+										
+										@FindBy(xpath="//div[contains(@class,'fc-event-title')]")
+										public WebElement VerifyOnTheDay;
+										
+									}
 		
 	}//calendar end
 	

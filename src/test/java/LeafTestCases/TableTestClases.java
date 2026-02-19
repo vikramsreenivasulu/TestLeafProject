@@ -117,8 +117,15 @@ public class TableTestClases {
 	    	BaseClass.Sleep();
 	    	tablemethods.calendar.ClickPrevious("2026-01-14");
 	    	BaseClass.Sleep();
-	    	tablemethods.calendar.EventDetails("Sankranthi");
+	    	tablemethods.calendar.JanEventDetails("Sankranthi");
 	    	BaseClass.Sleep();
+	    	tablemethods.calendar.Currentdate("2026-02-19");
+	    	BaseClass.Sleep();
+	    	tablemethods.calendar.FebEventDetails("Client A Meeting");
+	    	BaseClass.Sleep();
+	    	tablemethods.calendar.NxtMonth("2026-03-19");
+	    	BaseClass.Sleep();
+	    	tablemethods.calendar.MarEventDetails("Ugadhi");
 	    }
 	    
 	    

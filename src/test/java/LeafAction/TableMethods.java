@@ -256,23 +256,65 @@ public class TableMethods {
 			
 		}
 		
-		public void EventDetails(String title) {
+								public void JanEventDetails(String title) {
+									
+									tablelocators.calendar.janeventdetails.SendTitle.sendKeys(title);
+									
+									//Clicking the AllDays button
+									tablelocators.calendar.janeventdetails.AllDays.click();
+									
+									//Clicking the Save Button
+									tablelocators.calendar.janeventdetails.Save.click();
+									
+									//Verifying the text
+									String text = tablelocators.calendar.janeventdetails.VerifyOnTheDay.getText();
+									System.out.println("Retrive_Value: "+text);
+									Assert.assertEquals(text, "Sankranthi", "Testfailed");
+								}//end JanEventDetails
+		
+		public void Currentdate(String date) {
+			tablelocators.calendar.Currentdate.click();
 			
-			tablelocators.calendar.eventdetails.SendTitle.sendKeys(title);
-			
-			//Clicking the AllDays button
-			tablelocators.calendar.eventdetails.AllDays.click();
-			
-			//Clicking the Save Button
-			tablelocators.calendar.eventdetails.Save.click();
-			
-			//Verifying the texting
-			String text = tablelocators.calendar.eventdetails.VerifyOnTheDay.getText();
-			System.out.println("Retrive_Value"+text);
-			Assert.assertEquals(text, "Sankranthi", "Testfailed");
+			BaseClass.driver.findElement(By.xpath("//td[@data-date='"+date+"']")).click();
 		}
 		
+								public void FebEventDetails(String title) {
+									
+									tablelocators.calendar.febeventdetails.SendTitle.sendKeys(title);
+									
+									//Clicking the AllDays button
+									tablelocators.calendar.febeventdetails.AllDays.click();
+									
+									//Clicking the Save Button
+									tablelocators.calendar.febeventdetails.Save.click();
+									
+									//Verifying the text
+									String text = tablelocators.calendar.febeventdetails.VerifyOnTheDay.getText();
+									System.out.println("Retrive_Value: "+text);
+									Assert.assertEquals(text, "Client A Meeting", "Testfailed");
+								}//end FebEventDetails
 		
+		public void NxtMonth(String date) {
+			tablelocators.calendar.NxtMonth.click();
+			
+			BaseClass.driver.findElement(By.xpath("//td[@data-date='"+date+"']")).click();
+		}
+		
+								public void MarEventDetails(String title) {
+									
+									tablelocators.calendar.mareventdetails.SendTitle.sendKeys(title);
+									
+									//Clicking the AllDays button
+									tablelocators.calendar.mareventdetails.AllDays.click();
+									
+									//Clicking the Save Button
+									tablelocators.calendar.mareventdetails.Save.click();
+									
+									//Verifying the text
+									String text = tablelocators.calendar.mareventdetails.VerifyOnTheDay.getText();
+									System.out.println("Retrive_Value: "+text);
+									Assert.assertEquals(text, "Ugadhi", "Testfailed");
+								}//end MarEventDetails
 	}//Calendar
 	
 	
