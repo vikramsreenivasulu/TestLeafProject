@@ -6,13 +6,14 @@ public class ListMethods {
 
 	public ListMethod listmethod;
 	
-	
+	public Menu menu;
 	
 	public ListLocators listlocators = new ListLocators(); 
 	
 	
 	public ListMethods() {
 		listmethod = new ListMethod();
+		menu = new Menu();
 	}
 	
 	
@@ -23,7 +24,18 @@ public class ListMethods {
 		}
 	}
 	
-	
+	public class Menu{
+		
+		public void ClickMenu() {
+			listlocators.menu.ClickMenu.click();
+		}
+		
+		
+		
+		
+		
+	}//EndMenu
+
 	
 	
 	
