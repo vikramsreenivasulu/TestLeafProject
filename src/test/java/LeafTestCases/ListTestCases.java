@@ -19,8 +19,28 @@ public class ListTestCases {
 	
 	
 	@Test()
-	public void ATTestList() {
+	public void ATTestList() throws InterruptedException {
+		
+		BaseClass.Sleep();
 		listmethods.listmethod.ClickList();
+		BaseClass.Sleep();
 		listmethods.menu.ClickMenu();
+		BaseClass.Sleep();
+		listmethods.menu.MenuBarCustomers();
+		BaseClass.Sleep();
+		BaseClass.Sleep();
+		listmethods.menu.MenuBarOrders();
+		BaseClass.Sleep();
+		listmethods.menu.MenuBarShipments();
+		BaseClass.Sleep();
+		listmethods.menu.MenuBarProfile();
+		BaseClass.Sleep();
+		listmethods.menu.TabMenuOverview();
+		BaseClass.Sleep();
+		listmethods.menu.TabMenuMembers();
+		BaseClass.Sleep();
+		listmethods.menu.TabMenuSales();
+		BaseClass.Sleep();
+		listmethods.menu.TabMenuProfile();
 	}
 }
