@@ -26,15 +26,37 @@ public class ListMethods {
 		public void ClickList() {
 			listlocators.listlocator.ClickList.click();
 		}
+		
+		
+		
+		
+		
+		
 	}
 	
 	public class Menu {
+		
+		
+		public MenuBar menubar;
+		
+		public TabMenu tabMenu;
+		
+		public Menu() {
+			menubar =new MenuBar();
+	
+			tabMenu =new TabMenu();
+		}
+		
+		
 		
 		public void ClickMenu() {
 			listlocators.menu.ClickMenu.click();
 		}
 		
 		
+			public class MenuBar{
+				
+				
 			
 			public void MenuBarCustomers() {
 				listlocators.menu.menubar.MenuBarCustomers.click();
@@ -53,8 +75,9 @@ public class ListMethods {
 			}
 		
 		
-		
+			}
 			
+			public class TabMenu{
 			
 			public void TabMenuOverview() {
 				listlocators.menu.tabmenu.TabMenuOverview.click();
@@ -72,7 +95,7 @@ public class ListMethods {
 				listlocators.menu.tabmenu.TabMenuProfile.click();
 			}
 		
-		
+			}
 	}//EndMenu
 
 	

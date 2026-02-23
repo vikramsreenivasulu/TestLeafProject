@@ -26,7 +26,7 @@ public class ListTestCases {
 		BaseClass.Sleep();
 		listmethods.menu.ClickMenu();
 		BaseClass.Sleep();
-		listmethods.menu.MenuBarCustomers();
+		listmethods.menu.menubar.MenuBarCustomers();
 		BaseClass.Sleep();
 		BaseClass.Sleep();
 		listmethods.menu.MenuBarOrders();
