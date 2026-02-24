@@ -35,10 +35,12 @@ public class ListLocators {
 		
 		public MenuBar menubar;
 		public TabMenu tabmenu;
+		public PanelMenu panelmenu;
 		public Menu() {
 			PageFactory.initElements(BaseClass.driver, this);
 			menubar = new MenuBar();
 			tabmenu = new TabMenu();
+			panelmenu = new PanelMenu();
 		}
 		@FindBy(xpath="//li[@id='menuform:m_menu']//a[1]")
 		public WebElement ClickMenu;
@@ -80,6 +82,27 @@ public class ListLocators {
 		@FindBy(xpath="//li//a[@href='/menu.xhtml?i=3']")
 		public WebElement TabMenuProfile;
 		}
+		
+		public class PanelMenu{
+			
+			public PanelMenu() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath="(//div[@class='ui-panelmenu-panel'])[1]")
+			public WebElement PanelMenuCustomer;
+			
+			@FindBy(xpath="(//div[@class='ui-panelmenu-panel'])[2]")
+			public WebElement PanelMenuOrders;
+			
+			@FindBy(xpath="(//div[@class='ui-panelmenu-panel'])[3]")
+			public WebElement PanelMenuShipments;
+			
+			@FindBy(xpath="(//div[@class='ui-panelmenu-panel'])[4]")
+			public WebElement PanelMenuProfile;
+			
+		}//PanelMenu
+		
 		
 	}
 }//end ListLocators

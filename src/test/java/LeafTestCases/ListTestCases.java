@@ -26,21 +26,38 @@ public class ListTestCases {
 		BaseClass.Sleep();
 		listmethods.menu.ClickMenu();
 		BaseClass.Sleep();
-		listmethods.menu.menubar.MenuBarCustomers();
+//		listmethods.menu.menubar.MenuBarCustomers();
+//		BaseClass.Sleep();
+//		listmethods.menu.menubar.MenuBarOrders();
+//		BaseClass.Sleep();
+//		listmethods.menu.menubar.MenuBarShipments();
+//		BaseClass.Sleep();
+//		listmethods.menu.menubar.MenuBarProfile();
+//		BaseClass.Sleep();
+//		listmethods.menu.tabMenu.TabMenuOverview();
+//		BaseClass.Sleep();
+//		listmethods.menu.tabMenu.TabMenuMembers();
+//		BaseClass.Sleep();
+//		listmethods.menu.tabMenu.TabMenuSales();
+//		BaseClass.Sleep();
+//		listmethods.menu.tabMenu.TabMenuProfile();
 		BaseClass.Sleep();
+		listmethods.menu.panelmenu.PanelMenuCustomers();
 		BaseClass.Sleep();
-		listmethods.menu.MenuBarOrders();
-		BaseClass.Sleep();
-		listmethods.menu.MenuBarShipments();
-		BaseClass.Sleep();
-		listmethods.menu.MenuBarProfile();
-		BaseClass.Sleep();
-		listmethods.menu.TabMenuOverview();
-		BaseClass.Sleep();
-		listmethods.menu.TabMenuMembers();
-		BaseClass.Sleep();
-		listmethods.menu.TabMenuSales();
-		BaseClass.Sleep();
-		listmethods.menu.TabMenuProfile();
+		listmethods.menu.panelmenu.PanelMenuOrders();
+//		BaseClass.Sleep();
+//		listmethods.menu.panelmenu.PanelMenuShipments();
+//		BaseClass.Sleep();
+//		listmethods.menu.panelmenu.PanelMenuProfile();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
