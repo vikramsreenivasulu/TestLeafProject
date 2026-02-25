@@ -230,13 +230,44 @@ public class ListMethods {
 					
 				}
 				
-				public void PanelMenuShipments() {
+				public void PanelMenuShipments() throws InterruptedException {
 					listlocators.menu.panelmenu.PanelMenuShipments.click();
+					
+					Actions TrackerHover = new Actions(BaseClass.driver);
+					WebElement TrackerHovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[16]"));
+					TrackerHovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					TrackerHover.moveToElement(TrackerHovervalue).build().perform();
+					
+					Actions MapHover = new Actions(BaseClass.driver);
+					WebElement MapHovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[17]"));
+					MapHovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					MapHover.moveToElement(MapHovervalue).build().perform();
+					
+					Actions ManageHover = new Actions(BaseClass.driver);
+					WebElement ManageHovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[18]"));
+					ManageHovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					ManageHover.moveToElement(ManageHovervalue).build().perform();
+					
 				}
 				
 				
-				public void PanelMenuProfile() {
+				public void PanelMenuProfile() throws InterruptedException {
 					listlocators.menu.panelmenu.PanelMenuProfile.click();
+					
+					Actions SettingsHover = new Actions(BaseClass.driver);
+					WebElement SettingsHovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[19]"));
+					SettingsHovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					SettingsHover.moveToElement(SettingsHovervalue).build().perform();
+					
+					Actions BillingHover = new Actions(BaseClass.driver);
+					WebElement BilliingHovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[20]"));
+					BilliingHovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					BillingHover.moveToElement(BilliingHovervalue).build().perform();
 				}
 				
 				

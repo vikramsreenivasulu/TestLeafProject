@@ -103,6 +103,18 @@ public class ListLocators {
 			
 		}//PanelMenu
 		
-		
+		public class SlideMenu{
+			
+			public SlideMenu() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath="")
+			public WebElement SlideMenuCustomers;
+			
+			@FindBy(xpath="")
+			public WebElement SlideMenuOrders;
+			
+		}//SlideMenu
 	}
 }//end ListLocators
