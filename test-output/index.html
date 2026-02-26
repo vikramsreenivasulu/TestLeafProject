@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse-630802836\testng-customsuite.xml</span>
+                    <span>C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse-686617068\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -129,15 +129,14 @@
                   <a name="ATTestList">
                   </a> <!-- ATTestList -->
                   <span class="method-name">ATTestList</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLLIElement] has no size and location
   (Session info: chrome=145.0.7632.117)
 Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [541660d22fee96e539b54804b849f508, clickElement {id=f.78D75AE3E82145C07002337D6F6794A0.d.098A8EB417E7445B01A877EFB7E68499.e.2664}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\VIKRAM~1.SRE\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60950}, goog:processID: 19876, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60950/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (541660d22fee96e539b54804b849f508)] -&gt; xpath: (//ul//li//a[@role=&apos;menuitem&apos;])[36]]
-Session ID: 541660d22fee96e539b54804b849f508
+Command: [a15dee0ab97f4cec2d6f7033fb31cee5, actions {actions=[org.openqa.selenium.interactions.Sequence@41a90fa8]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\VIKRAM~1.SRE\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51482}, goog:processID: 16528, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51482/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a15dee0ab97f4cec2d6f7033fb31cee5
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -148,14 +147,10 @@ Session ID: 541660d22fee96e539b54804b849f508
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
-	at LeafAction.ListMethods$Menu$SlideMenu.SildeMenuOrders(ListMethods.java:282)
-	at LeafTestCases.ListTestCases.ATTestList(ListTestCases.java:55)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:643)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:616)
+	at LeafAction.ListMethods$Menu$MenuButton.MenuButtonOptions(ListMethods.java:363)
+	at LeafTestCases.ListTestCases.ATTestList(ListTestCases.java:57)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -191,7 +186,7 @@ Session ID: 541660d22fee96e539b54804b849f508
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse-630802836\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse-686617068\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -248,12 +243,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ATTestList')
 data.setCell(0, 2, 'LeafTestCases.ListTestCases')
-data.setCell(0, 3, 51391);
+data.setCell(0, 3, 16385);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 51 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -288,7 +283,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">ATTestList</span>
-                <span class="method-start">10344 ms</span>
+                <span class="method-start">3664 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

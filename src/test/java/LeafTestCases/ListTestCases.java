@@ -50,11 +50,13 @@ public class ListTestCases {
 //		BaseClass.Sleep();
 //		listmethods.menu.panelmenu.PanelMenuProfile();
 //		BaseClass.Sleep();
-		listmethods.menu.slidemenu.SildeMenuCustomers();
+//		listmethods.menu.slidemenu.SlideMenuCustomers();
+//		BaseClass.Sleep();
+//		listmethods.menu.slidemenu.SlideMenuOrders();
 		BaseClass.Sleep();
-		listmethods.menu.slidemenu.SildeMenuOrders();
-		
-		
+		listmethods.menu.menubutton.MenuButtonOptions();
+		BaseClass.Sleep();
+		listmethods.menu.contextmenu.ContextMenuClick();
 		
 		
 		

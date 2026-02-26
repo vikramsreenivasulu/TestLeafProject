@@ -38,15 +38,22 @@ public class ListLocators {
 		public PanelMenu panelmenu;
 		
 		public SlideMenu slidemenu;
+		
+		public MenuButton menubutton;
+		public ContextMenu contextmenu;
 		public Menu() {
 			PageFactory.initElements(BaseClass.driver, this);
 			menubar = new MenuBar();
 			tabmenu = new TabMenu();
 			panelmenu = new PanelMenu();
 			slidemenu = new SlideMenu();
+			menubutton = new MenuButton();
+			contextmenu = new ContextMenu();
 		}
 		@FindBy(xpath="//li[@id='menuform:m_menu']//a[1]")
 		public WebElement ClickMenu;
+		
+		
 		
 		public class MenuBar{
 			
@@ -110,9 +117,11 @@ public class ListLocators {
 		public class SlideMenu{
 			
 			public SlideMenuCustomers slidemenucustomers;
+			public SlideMenuOrders slidemenuorders;
 			public SlideMenu() {
 				PageFactory.initElements(BaseClass.driver, this);
 				slidemenucustomers = new SlideMenuCustomers();
+				slidemenuorders = new SlideMenuOrders();
 			}
 			
 			public class SlideMenuCustomers{
@@ -126,13 +135,47 @@ public class ListLocators {
 				
 				@FindBy(xpath="(//a[@role='menuitem'])[32]")
 				public WebElement SlideMenuCustomersNew;
+				
+				@FindBy(xpath="//div[contains(@class,'ui-slidemenu-backward ui-widget-header')]")
+				public WebElement SlideMenuBack;
+			}
+			
+			public class SlideMenuOrders{
+				
+				public SlideMenuOrders() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//ul//li//a[@role='menuitem'])[36]")
+				public WebElement SlideMenuOrders;
+				
+				@FindBy(xpath="//div[contains(@class,'ui-slidemenu-backward ui-widget-header')]")
+				public WebElement SlideMenuBack;
 			}
 			
 			
-			@FindBy(xpath="(//ul//li//a[@role='menuitem'])[36]")
-			public WebElement SlideMenuOrders;
-			
 		}//SlideMenu
+		
+		public class MenuButton{
+			
+			public MenuButton() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(id = "j_idt87:j_idt144_button")
+			public WebElement MenuButtonOptions;
+			
+		}//MenuButton
+		
+		public class ContextMenu{
+			
+			public ContextMenu() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath="//h5[normalize-space(text())='Context Menu']")
+			public WebElement ContextMenuClick;
+		}
 		
 	}
 }//end ListLocators

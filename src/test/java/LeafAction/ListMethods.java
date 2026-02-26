@@ -1,11 +1,17 @@
 package LeafAction;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import LeafLocators.ListLocators;
 import LeafLocators.ListLocators.Menu.MenuBar;
+import LeafLocators.ListLocators.Menu.MenuButton;
 import LeafLocators.ListLocators.Menu.SlideMenu;
 import LeafLocators.ListLocators.Menu.TabMenu;
 import Utility.BaseClass;
@@ -42,11 +48,15 @@ public class ListMethods {
 		public PanelMenu panelmenu;
 		
 		public SlideMenu slidemenu;
+		public MenuButton menubutton;
+		public ContextMenu contextmenu;
 		public Menu() {
 			menubar =new MenuBar();
 			tabMenu =new TabMenu();
 			panelmenu = new PanelMenu();
 			slidemenu = new SlideMenu();
+			menubutton = new MenuButton();
+			contextmenu = new ContextMenu();
 		}
 		
 		
@@ -156,6 +166,7 @@ public class ListMethods {
 			}
 		
 			}
+			
 			
 			public class TabMenu{
 			
@@ -275,18 +286,98 @@ public class ListMethods {
 			public class SlideMenu{
 				
 				
-				public void SildeMenuCustomers() {
-					listlocators.menu.slidemenu.slidemenucustomers.SlideMenuCustomers.click();
+				public void SlideMenuCustomers() throws InterruptedException {
 					
+					listlocators.menu.slidemenu.slidemenucustomers.SlideMenuCustomers.click();
+					BaseClass.Sleep();
 					listlocators.menu.slidemenu.slidemenucustomers.SlideMenuCustomersNew.click();
 					
+					//hover to Duplicate
+					Actions DuplicateHover = new Actions(BaseClass.driver);
+					WebElement DuplicateHovervalue = BaseClass.driver.findElement(By.xpath("(//a[@role='menuitem'])[34]"));
+					DuplicateHovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					DuplicateHover.moveToElement(DuplicateHovervalue).build().perform();
+					
+					for (int i = 0; i < 2; i++) {
+					    WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+					    listlocators.menu.slidemenu.slidemenucustomers.SlideMenuBack.click();
+					    Thread.sleep(2000); // small pause for page load
+					}
+					
+//					int count = 0;
+//
+//					while (count < 2) {
+//						listlocators.menu.slidemenu.slidemenucustomers.SlideMenuBack.click();
+//					    count++;
+//					}
+					
+					/*
+					 * for (int i = 0; i < 3; i++) {
+					 * listlocators.menu.slidemenu.slidemenucustomers.SlideMenuBack.click(); }
+					 */
+					
+				}//SildeMenuCustomers
+				
+				public void SlideMenuOrders() throws InterruptedException {
+					listlocators.menu.slidemenu.slidemenuorders.SlideMenuOrders.click();
+					
+					Actions ViewHover = new Actions(BaseClass.driver);
+					WebElement Viewhovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[24]"));
+					Viewhovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					ViewHover.moveToElement(Viewhovervalue).build().perform();
+					
+					Actions SearchHover = new Actions(BaseClass.driver);
+					WebElement SearchHovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[25]"));
+					SearchHovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					SearchHover.moveToElement(SearchHovervalue).build().perform();
+					
+					for (int i = 0; i < 1; i++) {
+					    WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+					    listlocators.menu.slidemenu.slidemenuorders.SlideMenuBack.click();
+					    Thread.sleep(2000); // small pause for page load
+					}
+				}
+			}//SlideMenu
+			
+			public class MenuButton{
+				
+				public void MenuButtonOptions() throws InterruptedException {
+					listlocators.menu.menubutton.MenuButtonOptions.click();
+					
+					Actions SaveHover = new Actions(BaseClass.driver);
+					WebElement Savehovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[26]"));
+					Savehovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					SaveHover.moveToElement(Savehovervalue).build().perform();
+					
+					Actions UpdateHover = new Actions(BaseClass.driver);
+					WebElement Updatehovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[27]"));
+					Updatehovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					UpdateHover.moveToElement(Updatehovervalue).build().perform();
+					
+					Actions DeleteHover = new Actions(BaseClass.driver);
+					WebElement Deletehovervalue = BaseClass.driver.findElement(By.xpath("(//li[@class='ui-menuitem ui-widget ui-corner-all'])[28]"));
+					Deletehovervalue.getAttribute("class");
+					BaseClass.Sleep();
+					DeleteHover.moveToElement(Deletehovervalue).build().perform();
+				}
+					
+			}//MenuButton
+			
+			public class ContextMenu{
+				
+				public void ContextMenuClick() {
+					
+					Action AC = new Action(BaseClass.driver);
+					listlocators.menu.contextmenu.ContextMenuClick.click();
+					
 					
 				}
-				
-				public void SildeMenuOrders() {
-					listlocators.menu.slidemenu.SlideMenuOrders.click();
-				}
-			}
+			}//ContextMenu
 			
 	}//EndMenu
 
