@@ -372,8 +372,9 @@ public class ListMethods {
 				
 				public void ContextMenuClick() {
 					
-					Action AC = new Action(BaseClass.driver);
-					listlocators.menu.contextmenu.ContextMenuClick.click();
+					Actions action = new Actions(BaseClass.driver);
+					WebElement rightclick = listlocators.menu.contextmenu.ContextMenuClick;
+					action.contextClick(rightclick).perform();
 					
 					
 				}
