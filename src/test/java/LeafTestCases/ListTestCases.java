@@ -41,16 +41,18 @@ public class ListTestCases {
 //		listmethods.menu.tabMenu.TabMenuSales();
 //		BaseClass.Sleep();
 //		listmethods.menu.tabMenu.TabMenuProfile();
+//		BaseClass.Sleep();
+//		listmethods.menu.panelmenu.PanelMenuCustomers();
+//		BaseClass.Sleep();
+//		listmethods.menu.panelmenu.PanelMenuOrders();
+//		BaseClass.Sleep();
+//		listmethods.menu.panelmenu.PanelMenuShipments();
+//		BaseClass.Sleep();
+//		listmethods.menu.panelmenu.PanelMenuProfile();
+//		BaseClass.Sleep();
+		listmethods.menu.slidemenu.SildeMenuCustomers();
 		BaseClass.Sleep();
-		listmethods.menu.panelmenu.PanelMenuCustomers();
-		BaseClass.Sleep();
-		listmethods.menu.panelmenu.PanelMenuOrders();
-		BaseClass.Sleep();
-		listmethods.menu.panelmenu.PanelMenuShipments();
-		BaseClass.Sleep();
-		listmethods.menu.panelmenu.PanelMenuProfile();
-		
-		
+		listmethods.menu.slidemenu.SildeMenuOrders();
 		
 		
 		

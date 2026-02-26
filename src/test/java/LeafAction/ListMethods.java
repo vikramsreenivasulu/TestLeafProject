@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import LeafLocators.ListLocators;
 import LeafLocators.ListLocators.Menu.MenuBar;
+import LeafLocators.ListLocators.Menu.SlideMenu;
 import LeafLocators.ListLocators.Menu.TabMenu;
 import Utility.BaseClass;
 
@@ -31,12 +32,7 @@ public class ListMethods {
 		public void ClickList() {
 			listlocators.listlocator.ClickList.click();
 		}
-		
-		
-		
-		
-		
-		
+	
 	}
 	
 	public class Menu {
@@ -44,10 +40,13 @@ public class ListMethods {
 		public TabMenu tabMenu;
 		
 		public PanelMenu panelmenu;
+		
+		public SlideMenu slidemenu;
 		public Menu() {
 			menubar =new MenuBar();
 			tabMenu =new TabMenu();
 			panelmenu = new PanelMenu();
+			slidemenu = new SlideMenu();
 		}
 		
 		
@@ -271,10 +270,23 @@ public class ListMethods {
 				}
 				
 				
-				
-				
 			}//PanelMenu
 			
+			public class SlideMenu{
+				
+				
+				public void SildeMenuCustomers() {
+					listlocators.menu.slidemenu.slidemenucustomers.SlideMenuCustomers.click();
+					
+					listlocators.menu.slidemenu.slidemenucustomers.SlideMenuCustomersNew.click();
+					
+					
+				}
+				
+				public void SildeMenuOrders() {
+					listlocators.menu.slidemenu.SlideMenuOrders.click();
+				}
+			}
 			
 	}//EndMenu
 

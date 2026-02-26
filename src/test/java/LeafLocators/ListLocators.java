@@ -36,11 +36,14 @@ public class ListLocators {
 		public MenuBar menubar;
 		public TabMenu tabmenu;
 		public PanelMenu panelmenu;
+		
+		public SlideMenu slidemenu;
 		public Menu() {
 			PageFactory.initElements(BaseClass.driver, this);
 			menubar = new MenuBar();
 			tabmenu = new TabMenu();
 			panelmenu = new PanelMenu();
+			slidemenu = new SlideMenu();
 		}
 		@FindBy(xpath="//li[@id='menuform:m_menu']//a[1]")
 		public WebElement ClickMenu;
@@ -83,6 +86,7 @@ public class ListLocators {
 		public WebElement TabMenuProfile;
 		}
 		
+		
 		public class PanelMenu{
 			
 			public PanelMenu() {
@@ -105,16 +109,30 @@ public class ListLocators {
 		
 		public class SlideMenu{
 			
+			public SlideMenuCustomers slidemenucustomers;
 			public SlideMenu() {
 				PageFactory.initElements(BaseClass.driver, this);
+				slidemenucustomers = new SlideMenuCustomers();
 			}
 			
-			@FindBy(xpath="")
-			public WebElement SlideMenuCustomers;
+			public class SlideMenuCustomers{
+				
+				public SlideMenuCustomers() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//ul//li//a[@role='menuitem'])[31]")
+				public WebElement SlideMenuCustomers;
+				
+				@FindBy(xpath="(//a[@role='menuitem'])[32]")
+				public WebElement SlideMenuCustomersNew;
+			}
 			
-			@FindBy(xpath="")
+			
+			@FindBy(xpath="(//ul//li//a[@role='menuitem'])[36]")
 			public WebElement SlideMenuOrders;
 			
 		}//SlideMenu
+		
 	}
 }//end ListLocators
