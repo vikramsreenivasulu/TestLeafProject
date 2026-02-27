@@ -5,7 +5,7 @@
     <classes>
       <class name="LeafTestCases.ListTestCases">
         <methods>
-          <include name="ATTestList"/>
+          <include name="ATTestTree"/>
           <include name="BeforeSuite"/>
         </methods>
       </class> <!-- LeafTestCases.ListTestCases -->

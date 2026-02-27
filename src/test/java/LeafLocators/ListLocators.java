@@ -11,9 +11,11 @@ public class ListLocators {
 	public ListLocator listlocator;
 	public Menu menu;
 	
+	public Tree tree;
 	public ListLocators() {
 		listlocator = new ListLocator();
 		menu  = new Menu();
+		tree = new Tree();
 	}
 	
 	
@@ -177,5 +179,67 @@ public class ListLocators {
 			public WebElement ContextMenuClick;
 		}
 		
-	}
+	}//Menu
+	
+	public class Tree{
+		
+		public InsideTree insidetree;
+		public Tree() {
+			PageFactory.initElements(BaseClass.driver, this);
+			insidetree = new InsideTree();
+		}
+		
+		@FindBy(xpath="//li[@id='menuform:m_tree']//a[1]")
+		public WebElement ClickTrue;
+		
+		public class InsideTree{
+			
+			public TreeDoc treedoc;
+			public InsideTree() {
+				PageFactory.initElements(BaseClass.driver, this);
+				treedoc = new TreeDoc();
+			}
+			
+			public class TreeDoc{
+				
+				public TreeDoc() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//ul//li//div//span[@class='ui-tree-toggler ui-icon ui-icon-triangle-1-e'])[1]")
+				public WebElement Treedocument;
+				
+				@FindBy(xpath="(//span[contains(@class,'ui-tree-toggler ui-icon')])[2]")
+				public WebElement DocWork;
+				
+				@FindBy(xpath="(//span[@class='ui-treenode-label ui-corner-all'])[3]")
+				public WebElement Expenses;
+				
+				@FindBy(xpath="(//span[text()='Resume.doc'])[1]")
+				public WebElement Resume;
+			}
+			
+			
+			@FindBy(xpath="")
+			public WebElement TreePictures;
+			
+			@FindBy(xpath="")
+			public WebElement TreeMovies;
+			
+			
+			
+		}//InsideTree
+		
+	}//Tree
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }//end ListLocators

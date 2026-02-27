@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import LeafLocators.ListLocators;
@@ -22,13 +23,14 @@ public class ListMethods {
 	
 	public Menu menu;
 	
-	
+	public Tree tree;
 	public ListLocators listlocators = new ListLocators(); 
 	
 	
 	public ListMethods() {
 		listmethod = new ListMethod();
 		menu = new Menu();
+		tree = new Tree();
 		
 	}
 	
@@ -382,7 +384,44 @@ public class ListMethods {
 			
 	}//EndMenu
 
+	public class Tree{
+		
+		public InsideTree insidetree;
+		public Tree() {
+			insidetree = new InsideTree();
+		}
+		public void ClickTree() {
+			listlocators.tree.ClickTrue.click();
+		}
+		
+		public class InsideTree{
+			
+			public void Treedocument() {
+				listlocators.tree.insidetree.treedoc.Treedocument.click();
+				
+				 WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treedoc.DocWork)).click();
+				
+				 wait.until(ExpectedConditions.elementToBeClickable(
+					        listlocators.tree.insidetree.treedoc.Expenses)).click();
+
+					    wait.until(ExpectedConditions.elementToBeClickable(
+					        listlocators.tree.insidetree.treedoc.Resume)).click();
 	
+				
+			}
+			
+			public void TreePictures() {
+				listlocators.tree.insidetree.TreePictures.click();
+			}
+			
+			public void TreeMovies() {
+				listlocators.tree.insidetree.TreeMovies.click();
+			}
+		}
+		
+	}
 	
 	
 }//endListMethods
