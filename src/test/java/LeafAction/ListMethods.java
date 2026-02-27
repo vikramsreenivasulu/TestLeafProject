@@ -413,13 +413,14 @@ public class ListMethods {
 			}
 			
 			public void TreePictures() {
-				listlocators.tree.insidetree.TreePictures.click();
+				listlocators.tree.insidetree.treepics.TreePictures.click();
 			}
 			
 			public void TreeMovies() {
-				listlocators.tree.insidetree.TreeMovies.click();
+				listlocators.tree.insidetree.treemovs.TreeMovies.click();
 			}
-		}
+			
+		}//InsideTree
 		
 	}
 	

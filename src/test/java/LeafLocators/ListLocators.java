@@ -195,9 +195,14 @@ public class ListLocators {
 		public class InsideTree{
 			
 			public TreeDoc treedoc;
+			
+			public TreePics treepics;
+			public TreeMovs treemovs;
 			public InsideTree() {
 				PageFactory.initElements(BaseClass.driver, this);
 				treedoc = new TreeDoc();
+				treepics = new TreePics();
+				treemovs = new TreeMovs();
 			}
 			
 			public class TreeDoc{
@@ -219,12 +224,26 @@ public class ListLocators {
 				public WebElement Resume;
 			}
 			
+			public class TreePics{
+				
+				public TreePics() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//ul//li//div//span[@class='ui-tree-toggler ui-icon ui-icon-triangle-1-e'])[2]")
+				public WebElement TreePictures;
+			}
 			
-			@FindBy(xpath="")
-			public WebElement TreePictures;
+			public class TreeMovs{
+				
+				public TreeMovs() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="")
+				public WebElement TreeMovies;
+			}
 			
-			@FindBy(xpath="")
-			public WebElement TreeMovies;
 			
 			
 			
