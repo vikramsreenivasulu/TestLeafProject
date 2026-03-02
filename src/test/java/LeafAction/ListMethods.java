@@ -409,15 +409,51 @@ public class ListMethods {
 					    wait.until(ExpectedConditions.elementToBeClickable(
 					        listlocators.tree.insidetree.treedoc.Resume)).click();
 	
-				
+					    wait.until(ExpectedConditions.elementToBeClickable(
+					    		listlocators.tree.insidetree.treedoc.TestLeaf)).click();
+					    
+					    wait.until(ExpectedConditions.elementToBeClickable(
+					    		listlocators.tree.insidetree.treedoc.RefDoc)).click();
+					    
 			}
 			
 			public void TreePictures() {
 				listlocators.tree.insidetree.treepics.TreePictures.click();
+				
+				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treepics.Bercelona)).click();
+				 
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treepics.Logo)).click();
+				 
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treepics.optimusprime)).click();
+				 
+				
 			}
 			
 			public void TreeMovies() {
 				listlocators.tree.insidetree.treemovs.TreeMovies.click();
+				
+				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treemovs.AlPacino)).click();
+				 
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treemovs.Saceface)).click();
+				 
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treemovs.CarlitosWay)).click();
+				
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treemovs.Robertde)).click();
+				 
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treemovs.Goodfellas)).click();
+				 
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.insidetree.treemovs.Untoubles)).click();
 			}
 			
 		}//InsideTree

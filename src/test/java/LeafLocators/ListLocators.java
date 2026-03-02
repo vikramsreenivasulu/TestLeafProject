@@ -222,6 +222,12 @@ public class ListLocators {
 				
 				@FindBy(xpath="(//span[text()='Resume.doc'])[1]")
 				public WebElement Resume;
+				
+				@FindBy(xpath="(//span[contains(@class,'ui-tree-toggler ui-icon')])[3]")
+				public WebElement TestLeaf;
+				
+				@FindBy(xpath="(//span[@role='treeitem'])[6]")
+				public WebElement RefDoc;
 			}
 			
 			public class TreePics{
@@ -230,8 +236,17 @@ public class ListLocators {
 					PageFactory.initElements(BaseClass.driver, this);
 				}
 				
-				@FindBy(xpath="(//ul//li//div//span[@class='ui-tree-toggler ui-icon ui-icon-triangle-1-e'])[2]")
+				@FindBy(xpath="//li[@id='j_idt88:1']//span[@class='ui-tree-toggler ui-icon ui-icon-triangle-1-e']")
 				public WebElement TreePictures;
+				
+				@FindBy(xpath="(//span[@role='treeitem'])[8]")
+				public WebElement Bercelona;
+				
+				@FindBy(xpath="(//span[@role='treeitem'])[9]")
+				public WebElement Logo;
+				
+				@FindBy(xpath="(//span[@role='treeitem'])[10]")
+				public WebElement optimusprime;
 			}
 			
 			public class TreeMovs{
@@ -240,8 +255,27 @@ public class ListLocators {
 					PageFactory.initElements(BaseClass.driver, this);
 				}
 				
-				@FindBy(xpath="")
+				@FindBy(xpath="(//li[@id='j_idt88:2']//span[@class='ui-tree-toggler ui-icon ui-icon-triangle-1-e'])[1]")
 				public WebElement TreeMovies;
+				
+				@FindBy(xpath="(//span[@class='ui-tree-toggler ui-icon ui-icon-triangle-1-e'])[1]")
+				public WebElement AlPacino;
+				
+				
+				@FindBy(xpath="(//span[@role='treeitem'])[13]")
+				public WebElement Saceface;
+				
+				@FindBy(xpath="(//span[@role='treeitem'])[14]")
+				public WebElement CarlitosWay;
+				
+				@FindBy(xpath="//span[@class='ui-tree-toggler ui-icon ui-icon-triangle-1-e']")
+				public WebElement Robertde;
+				
+				@FindBy(xpath="(//span[@role='treeitem'])[16]")
+				public WebElement Goodfellas ;
+				
+				@FindBy(xpath="(//span[@role='treeitem'])[17]")
+				public WebElement  Untoubles;
 			}
 			
 			

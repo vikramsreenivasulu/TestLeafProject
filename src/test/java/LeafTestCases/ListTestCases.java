@@ -70,8 +70,9 @@ public class ListTestCases {
 		BaseClass.Sleep();
 		listmethods.tree.insidetree.Treedocument();
 		BaseClass.Sleep();
-//		listmethods.tree.insidetree.TreePictures();
-//		BaseClass.Sleep();
-//		listmethods.tree.insidetree.TreeMovies();
+		listmethods.tree.insidetree.TreePictures();
+		BaseClass.Sleep();
+		listmethods.tree.insidetree.TreeMovies();
+		
 	}//ATTestTree
 }
