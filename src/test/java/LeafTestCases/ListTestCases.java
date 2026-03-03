@@ -73,6 +73,9 @@ public class ListTestCases {
 		listmethods.tree.insidetree.TreePictures();
 		BaseClass.Sleep();
 		listmethods.tree.insidetree.TreeMovies();
+		BaseClass.Sleep();
+		listmethods.tree.treetable.TreeDocuments();
+		
 		
 	}//ATTestTree
 }

@@ -387,8 +387,10 @@ public class ListMethods {
 	public class Tree{
 		
 		public InsideTree insidetree;
+		public TreeTable  treetable;
 		public Tree() {
 			insidetree = new InsideTree();
+			treetable = new  TreeTable();
 		}
 		public void ClickTree() {
 			listlocators.tree.ClickTrue.click();
@@ -458,6 +460,17 @@ public class ListMethods {
 			
 		}//InsideTree
 		
+		public class TreeTable{
+			
+			public void TreeDocuments() {
+				listlocators.tree.treetable.treedoc.Documents.click();
+				
+			}
+			
+			
+			
+			
+		}
 	}
 	
 	

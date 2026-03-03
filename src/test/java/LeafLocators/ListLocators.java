@@ -184,9 +184,11 @@ public class ListLocators {
 	public class Tree{
 		
 		public InsideTree insidetree;
+		public TreeTable treetable;
 		public Tree() {
 			PageFactory.initElements(BaseClass.driver, this);
 			insidetree = new InsideTree();
+			treetable = new TreeTable();
 		}
 		
 		@FindBy(xpath="//li[@id='menuform:m_tree']//a[1]")
@@ -282,6 +284,30 @@ public class ListLocators {
 			
 			
 		}//InsideTree
+		
+		public class TreeTable{
+			public TreeDoc treedoc;
+			public TreeTable() {
+				PageFactory.initElements(BaseClass.driver, this);
+				treedoc = new TreeDoc();
+				
+			}
+			
+			public class TreeDoc{
+				
+				public TreeDoc() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell']//span)[1]")
+				public WebElement Documents;
+				
+				
+			}//TreeDoc
+			
+		}//TreeTable
+		
+		
 		
 	}//Tree
 	
