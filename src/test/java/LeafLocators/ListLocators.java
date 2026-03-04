@@ -287,9 +287,13 @@ public class ListLocators {
 		
 		public class TreeTable{
 			public TreeDoc treedoc;
+			public TreePictures treepictures;
+			public TreeMovies  treemovies;
 			public TreeTable() {
 				PageFactory.initElements(BaseClass.driver, this);
 				treedoc = new TreeDoc();
+				treepictures = new TreePictures();
+				treemovies = new TreeMovies();
 				
 			}
 			
@@ -302,9 +306,55 @@ public class ListLocators {
 				@FindBy(xpath="(//tr//td[@role='gridcell']//span)[1]")
 				public WebElement Documents;
 				
+				@FindBy(xpath="//tr[@id='j_idt98_node_0_0']//td[@role='gridcell']//span[@class='ui-treetable-toggler ui-icon ui-icon-triangle-1-e ui-c']")
+				public WebElement Work;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[7]")
+				public WebElement Expenses;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[10]")
+				public WebElement Resume;
+				
+				@FindBy(xpath="//tr[@id='j_idt98_node_0_1']//td[@role='gridcell']//span[@class='ui-treetable-toggler ui-icon ui-icon-triangle-1-e ui-c']")
+				public WebElement TestLeaf;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[16]")
+				public WebElement RefDoc;
 				
 			}//TreeDoc
 			
+			public class TreePictures{
+				
+				public TreePictures() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell']//span)[21]")
+				public WebElement Pictures;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[22]")
+				public WebElement Barcelona;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[25]")
+				public WebElement logo;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[28]")
+				public WebElement Optimusprime;
+				
+			}//TreePictures
+			
+			public class TreeMovies{
+				
+				public TreeMovies() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell']//span)[32]")
+				public WebElement Pictures;
+				
+				@FindBy(xpath="")
+				public WebElement AlPacino;
+			}
 		}//TreeTable
 		
 		

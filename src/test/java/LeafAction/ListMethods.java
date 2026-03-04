@@ -3,6 +3,7 @@ package LeafAction;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -462,16 +463,89 @@ public class ListMethods {
 		
 		public class TreeTable{
 			
-			public void TreeDocuments() {
-				listlocators.tree.treetable.treedoc.Documents.click();
+			public void TreeDocuments() throws InterruptedException {
+		
+				 WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+
+				    WebElement documents = wait.until(
+				            ExpectedConditions.elementToBeClickable(
+				                    listlocators.tree.treetable.treedoc.Documents));
+				  
 				
-			}
+				JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+				js.executeScript("arguments[0].scrollIntoView(true);", documents);
+				documents.click();
+				
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.treetable.treedoc.Work)).click();
+				 
+				 BaseClass.Sleep();
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.treetable.treedoc.Expenses)).click();
+				 
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.treetable.treedoc.Resume)).click();
+				
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.treetable.treedoc.TestLeaf)).click();
+				 
+				 BaseClass.Sleep();
+				 wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.treetable.treedoc.RefDoc)).click();
+				 
+			}//TreeDocuments
 			
 			
+				
+				public void TreePicture() throws InterruptedException {
+					
+					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+
+				    WebElement pictures = wait.until(
+				            ExpectedConditions.elementToBeClickable(
+				            		listlocators.tree.treetable.treepictures.Pictures));
+				    
+				    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+					js.executeScript("arguments[0].scrollIntoView(true);", pictures);
+					pictures.click();
+					
+					BaseClass.Sleep();
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treepictures.Barcelona)).click();
+					
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treepictures.logo)).click();
+					
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treepictures.Optimusprime)).click();
+					
+					
+				}//TreePicture
+				
+				public void TreeMovies() {
+					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+
+				    WebElement movies = wait.until(
+				            ExpectedConditions.elementToBeClickable(
+				            		listlocators.tree.treetable.treemovies.Pictures));
+				    
+				    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+					js.executeScript("arguments[0].scrollIntoView(true);", movies);
+					movies.click();
+					
+				}
 			
-			
-		}
-	}
+		}//TreeTable
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}//Tree
 	
 	
 }//endListMethods
