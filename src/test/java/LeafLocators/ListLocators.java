@@ -185,10 +185,13 @@ public class ListLocators {
 		
 		public InsideTree insidetree;
 		public TreeTable treetable;
+		
+		public HorizontalTree horizontaltree;
 		public Tree() {
 			PageFactory.initElements(BaseClass.driver, this);
 			insidetree = new InsideTree();
 			treetable = new TreeTable();
+			horizontaltree = new HorizontalTree();
 		}
 		
 		@FindBy(xpath="//li[@id='menuform:m_tree']//a[1]")
@@ -350,14 +353,78 @@ public class ListLocators {
 				}
 				
 				@FindBy(xpath="(//tr//td[@role='gridcell']//span)[32]")
-				public WebElement Pictures;
+				public WebElement Movies;
 				
-				@FindBy(xpath="")
+				@FindBy(xpath="(//tr//td[@role='gridcell']//span)[35]")
 				public WebElement AlPacino;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[37]")
+				public WebElement ScarFace;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[40]")
+				public WebElement carlitosWay;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell']//span)[46]")
+				public WebElement RobertDe;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[46]")
+				public WebElement GoodFellas;
+				
+				@FindBy(xpath="(//tr//td[@role='gridcell'])[49]")
+				public WebElement untouchables;
+				
 			}
 		}//TreeTable
 		
-		
+		public class HorizontalTree{
+			
+			public Documents documents;
+			public Pictures pictures;
+			public HorizontalTree() {
+				
+				PageFactory.initElements(BaseClass.driver, this);
+				documents = new Documents();
+				pictures = new Pictures();
+				
+			}
+			
+			@FindBy(xpath="(//tr//td[@data-rowkey='root']//span)[1]")
+			public WebElement Files;
+			
+			public class Documents{
+				
+				public Documents() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//td[@data-nodetype='default']//span[@class='ui-tree-toggler ui-icon ui-icon-plus'])[1]")
+				public WebElement ClickDocumnets;
+				
+				@FindBy(xpath="(//td//div//span[@class='ui-tree-toggler ui-icon ui-icon-plus'])[1]")
+				public WebElement Work;
+				
+				@FindBy(xpath="(//span[text()='TestLeaf']/preceding-sibling::span)[3]")
+				public WebElement TestLeaf;
+			}//Documents
+			
+			public class Pictures{
+				
+				public Pictures() {
+					PageFactory.initElements(BaseClass.driver, this);
+				}
+				
+				@FindBy(xpath="(//span[text()='Pictures']/preceding-sibling::span)[3]")
+				public WebElement ClickPictures;
+				
+			}//Pictures
+			
+			public class Movies{
+				
+				public Movies() {
+					
+				}
+			}
+		}//HorizontalTree
 		
 	}//Tree
 	

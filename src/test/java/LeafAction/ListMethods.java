@@ -389,9 +389,11 @@ public class ListMethods {
 		
 		public InsideTree insidetree;
 		public TreeTable  treetable;
+		public HorizontalTree horizontaltree;
 		public Tree() {
 			insidetree = new InsideTree();
 			treetable = new  TreeTable();
+			horizontaltree = new HorizontalTree();
 		}
 		public void ClickTree() {
 			listlocators.tree.ClickTrue.click();
@@ -522,24 +524,83 @@ public class ListMethods {
 					
 				}//TreePicture
 				
-				public void TreeMovies() {
+				public void TreeMovies() throws InterruptedException {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
 
 				    WebElement movies = wait.until(
 				            ExpectedConditions.elementToBeClickable(
-				            		listlocators.tree.treetable.treemovies.Pictures));
+				            		listlocators.tree.treetable.treemovies.Movies));
 				    
 				    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
 					js.executeScript("arguments[0].scrollIntoView(true);", movies);
 					movies.click();
 					
+					BaseClass.Sleep();
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treemovies.AlPacino)).click();
+					
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treemovies.ScarFace)).click();
+					
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treemovies.carlitosWay)).click();
+					
+					BaseClass.Sleep();
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treemovies.RobertDe)).click();
+					
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treemovies.GoodFellas)).click();
+					
+					wait.until(ExpectedConditions.elementToBeClickable(
+							 listlocators.tree.treetable.treemovies.untouchables)).click();
 				}
 			
 		}//TreeTable
 		
 		
 		
-		
+		public class HorizontalTree{
+			
+			public void Documents() throws InterruptedException {
+				
+				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+
+			    WebElement files = wait.until(
+			            ExpectedConditions.elementToBeClickable(
+			            		listlocators.tree.horizontaltree.Files));
+			    
+			    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+				js.executeScript("arguments[0].scrollIntoView(true);", files);
+				files.click();
+				
+				BaseClass.Sleep();
+				wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.horizontaltree.documents.ClickDocumnets)).click();
+				
+				wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.horizontaltree.documents.Work)).click();
+				
+				wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.horizontaltree.documents.TestLeaf)).click();
+				
+			}//Documents
+			
+			public void Pictures() {
+				
+				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+
+			    WebElement files = wait.until(
+			            ExpectedConditions.elementToBeClickable(
+			            		listlocators.tree.horizontaltree.pictures.ClickPictures));
+			    
+			    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+				js.executeScript("arguments[0].scrollIntoView(true);", files);
+				files.click();
+				 
+			}//Pictures
+			
+		}//HorizontalTree
 		
 		
 		
