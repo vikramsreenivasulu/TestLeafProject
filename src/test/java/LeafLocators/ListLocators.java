@@ -380,11 +380,13 @@ public class ListLocators {
 			
 			public Documents documents;
 			public Pictures pictures;
+			public Movies movies;
 			public HorizontalTree() {
 				
 				PageFactory.initElements(BaseClass.driver, this);
 				documents = new Documents();
 				pictures = new Pictures();
+				movies = new Movies();
 				
 			}
 			
@@ -421,8 +423,17 @@ public class ListLocators {
 			public class Movies{
 				
 				public Movies() {
-					
+					PageFactory.initElements(BaseClass.driver, this);
 				}
+				
+				@FindBy(xpath="(//span[text()='Movies']/preceding-sibling::span)[3]")
+				public WebElement ClickMovies;
+				
+				@FindBy(xpath="(//td[@data-nodetype='default']//span[@class='ui-tree-toggler ui-icon ui-icon-plus'])[1]")
+				public WebElement AIPacino;
+				
+				@FindBy(xpath="(//span[text()='Robert De Niro']/preceding-sibling::span[contains(@class,'ui-tree-toggler')])[2]")
+				public WebElement RobertDeNiro;
 			}
 		}//HorizontalTree
 		

@@ -566,13 +566,13 @@ public class ListMethods {
 				
 				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
 
-			    WebElement files = wait.until(
+			    WebElement Documents = wait.until(
 			            ExpectedConditions.elementToBeClickable(
 			            		listlocators.tree.horizontaltree.Files));
 			    
 			    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
-				js.executeScript("arguments[0].scrollIntoView(true);", files);
-				files.click();
+				js.executeScript("arguments[0].scrollIntoView(true);", Documents);
+				Documents.click();
 				
 				BaseClass.Sleep();
 				wait.until(ExpectedConditions.elementToBeClickable(
@@ -590,15 +590,36 @@ public class ListMethods {
 				
 				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
 
-			    WebElement files = wait.until(
+			    WebElement Pictures = wait.until(
 			            ExpectedConditions.elementToBeClickable(
 			            		listlocators.tree.horizontaltree.pictures.ClickPictures));
 			    
 			    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
-				js.executeScript("arguments[0].scrollIntoView(true);", files);
-				files.click();
+				js.executeScript("arguments[0].scrollIntoView(true);", Pictures);
+				Pictures.click();
 				 
 			}//Pictures
+			
+			public void Movies() throws InterruptedException {
+				
+				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
+
+			    WebElement Movies = wait.until(
+			            ExpectedConditions.elementToBeClickable(
+			            		listlocators.tree.horizontaltree.movies.ClickMovies));
+			    
+			    JavascriptExecutor js = (JavascriptExecutor) BaseClass.driver;
+				js.executeScript("arguments[0].scrollIntoView(true);", Movies);
+				Movies.click();
+
+				BaseClass.Sleep();
+				wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.horizontaltree.movies.AIPacino)).click();
+				
+				wait.until(ExpectedConditions.elementToBeClickable(
+						 listlocators.tree.horizontaltree.movies.RobertDeNiro)).click();
+				
+			}
 			
 		}//HorizontalTree
 		

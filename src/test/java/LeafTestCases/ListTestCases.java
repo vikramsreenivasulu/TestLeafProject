@@ -84,6 +84,7 @@ public class ListTestCases {
 		BaseClass.Sleep();
 		listmethods.tree.horizontaltree.Pictures();
 		BaseClass.Sleep();
+		listmethods.tree.horizontaltree.Movies();
 		
 	}//ATTestTree
 }
