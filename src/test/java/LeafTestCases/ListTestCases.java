@@ -87,4 +87,17 @@ public class ListTestCases {
 		listmethods.tree.horizontaltree.Movies();
 		
 	}//ATTestTree
+	
+	@Test()
+	public void AtTestList() throws InterruptedException {
+		BaseClass.Sleep();
+		listmethods.listmethod.ClickList();
+		BaseClass.Sleep();
+		listmethods.list.ClickInsideList();
+		BaseClass.Sleep();
+		listmethods.list.ViewOfListProduct();
+		BaseClass.Sleep();
+		listmethods.list.ProductDetails();
+		
+	}
 }

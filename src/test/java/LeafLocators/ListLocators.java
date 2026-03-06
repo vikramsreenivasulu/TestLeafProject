@@ -1,5 +1,7 @@
 package LeafLocators;
 
+
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,11 +13,13 @@ public class ListLocators {
 	public ListLocator listlocator;
 	public Menu menu;
 	
+	public List list;
 	public Tree tree;
 	public ListLocators() {
 		listlocator = new ListLocator();
 		menu  = new Menu();
 		tree = new Tree();
+		list = new List();
 	}
 	
 	
@@ -440,6 +444,32 @@ public class ListLocators {
 	}//Tree
 	
 	
+	public class List{
+		public ListProductDetails listproductdetails;
+		public List() {
+			PageFactory.initElements(BaseClass.driver, this);
+			listproductdetails = new ListProductDetails();
+		}
+		
+		@FindBy(xpath="//a[contains(@href,'/list.xhtml')]")
+		public WebElement ClickInsideList;
+		
+		@FindBy(xpath="(//span[contains(@class,'ui-button-icon-left ui-icon')])[1]")
+		public WebElement ViewOfListProduct;
+		
+		public class ListProductDetails{
+			
+			public ListProductDetails() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath="//ul//li[@class='ui-dataview-row']")
+			public WebElement ProductName;
+			
+			@FindBy(xpath="//div[@class='product-list-action']")
+			public WebElement ProductPrice;
+		}
+	}
 	
 	
 	

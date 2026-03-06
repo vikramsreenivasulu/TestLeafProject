@@ -1,21 +1,16 @@
 package LeafAction;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import LeafLocators.ListLocators;
-import LeafLocators.ListLocators.Menu.MenuBar;
-import LeafLocators.ListLocators.Menu.MenuButton;
-import LeafLocators.ListLocators.Menu.SlideMenu;
-import LeafLocators.ListLocators.Menu.TabMenu;
 import Utility.BaseClass;
 
 public class ListMethods {
@@ -25,6 +20,7 @@ public class ListMethods {
 	public Menu menu;
 	
 	public Tree tree;
+	public InList list;
 	public ListLocators listlocators = new ListLocators(); 
 	
 	
@@ -32,6 +28,7 @@ public class ListMethods {
 		listmethod = new ListMethod();
 		menu = new Menu();
 		tree = new Tree();
+		list = new InList();
 		
 	}
 	
@@ -621,13 +618,43 @@ public class ListMethods {
 				
 			}
 			
-		}//HorizontalTree
-		
-		
-		
-		
+		}//HorizontalTree	
 		
 	}//Tree
 	
+	public class InList{
+		
+		public void ClickInsideList() {
+			listlocators.list.ClickInsideList.click();
+		}
+		
+		public void ViewOfListProduct() {
+			listlocators.list.ViewOfListProduct.click();
+		}
+		
+		public void ProductDetails() {
+			
+			WebElement productName = listlocators.list.listproductdetails.ProductName;
+
+			  List<WebElement> Names = productName.findElements(By.xpath("//div//div[@class='product-name']"));
+			    System.out.println(Names.size());
+
+			for(WebElement element : Names) {
+			    String Nametext = element.getText();
+			    System.out.println(Nametext);
+			}
+
+			
+			WebElement productPrice = listlocators.list.listproductdetails.ProductPrice;
+			List<WebElement> Prices = productPrice.findElements(By.xpath("//span[@class='product-price']"));
+		    System.out.println(Prices.size());
+
+			for(WebElement element1 : Prices) {
+			    String Pricetext = element1.getText();
+			    System.out.println(Pricetext);
+			}
+		
+		}
+	}//List
 	
 }//endListMethods
