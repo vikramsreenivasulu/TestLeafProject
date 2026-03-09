@@ -655,6 +655,30 @@ public class ListMethods {
 			}
 		
 		}
-	}//List
+		
+		public void PageTwoProductDetails() {
+			
+			listlocators.list.listproductdetails.PageTwoProductDetails.click();
+			
+			WebElement pageTwo = listlocators.list.listproductdetails.PageTwoProductDetails;
+			
+			  List<WebElement> Names = pageTwo.findElements(By.xpath("//div//div[@class='product-name']"));
+			    System.out.println(Names.size());
+
+			for(WebElement element : Names) {
+			    String Nametext = element.getText();
+			    System.out.println(Nametext);
+			}
+			
+			WebElement productPrice = listlocators.list.listproductdetails.PageTwoProductPrice;
+			List<WebElement> Prices = productPrice.findElements(By.xpath("//span[@class='product-price']"));
+		    System.out.println(Prices.size());
+
+			for(WebElement element1 : Prices) {
+			    String Pricetext = element1.getText();
+			    System.out.println(Pricetext);
+			}
+		}
+	}//InList
 	
 }//endListMethods

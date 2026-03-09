@@ -468,6 +468,12 @@ public class ListLocators {
 			
 			@FindBy(xpath="//div[@class='product-list-action']")
 			public WebElement ProductPrice;
+			
+			@FindBy(xpath="//a[contains(@class,'ui-paginator-next ui-state-default')]")
+			public WebElement PageTwoProductDetails;
+			
+			@FindBy(xpath="//div[@class='product-list-action']")
+			public WebElement  PageTwoProductPrice;
 		}
 	}
 	

@@ -67,18 +67,18 @@ public class ListTestCases {
 		listmethods.listmethod.ClickList();
 		BaseClass.Sleep();
 		listmethods.tree.ClickTree();
-//		BaseClass.Sleep();
-//		listmethods.tree.insidetree.Treedocument();
-//		BaseClass.Sleep();
-//		listmethods.tree.insidetree.TreePictures();
-//		BaseClass.Sleep();
-//		listmethods.tree.insidetree.TreeMovies();
-//		BaseClass.Sleep();
-//		listmethods.tree.treetable.TreeDocuments();
-//		BaseClass.Sleep();
-//		listmethods.tree.treetable.TreePicture();
-//		BaseClass.Sleep();
-//		listmethods.tree.treetable.TreeMovies();
+		BaseClass.Sleep();
+		listmethods.tree.insidetree.Treedocument();
+		BaseClass.Sleep();
+		listmethods.tree.insidetree.TreePictures();
+		BaseClass.Sleep();
+		listmethods.tree.insidetree.TreeMovies();
+		BaseClass.Sleep();
+		listmethods.tree.treetable.TreeDocuments();
+		BaseClass.Sleep();
+		listmethods.tree.treetable.TreePicture();
+		BaseClass.Sleep();
+		listmethods.tree.treetable.TreeMovies();
 		BaseClass.Sleep();
 		listmethods.tree.horizontaltree.Documents();
 		BaseClass.Sleep();
@@ -98,6 +98,8 @@ public class ListTestCases {
 		listmethods.list.ViewOfListProduct();
 		BaseClass.Sleep();
 		listmethods.list.ProductDetails();
+		BaseClass.Sleep();
+		listmethods.list.PageTwoProductDetails();
 		
 	}
 }
