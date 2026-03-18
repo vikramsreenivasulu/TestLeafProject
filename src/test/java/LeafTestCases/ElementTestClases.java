@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import LeafAction.ElementMethods;
 import Utility.BaseClass;
+import Utility.ExtentReport;
 
 public class ElementTestClases {
 
@@ -15,10 +16,12 @@ public class ElementTestClases {
 	public void BeforeSuit() {
 		BaseClass.startdriver();
 		elementmethods = new ElementMethods();
+		ExtentReport.startReport();
 	}
 
 	@Test()
 	public void DropDownAttest() throws InterruptedException {
+		ExtentReport.createTest("DropDownAttest");
 
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
@@ -48,6 +51,7 @@ public class ElementTestClases {
 
 	@Test
 	public void WaitsAtTest() throws InterruptedException {
+		ExtentReport.createTest("Wait");
 
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
@@ -122,7 +126,8 @@ public class ElementTestClases {
 		elementmethods.textbox.TextEditor(
 				"Fun Ways to Teach Kids About Cricket | Engaging Cricket FactsCricket is a popular bat-and-ball sport played between two  ");
 		BaseClass.Sleep();
-		elementmethods.textbox.TextEditor("teams of 11 players on a large oval field with a rectangular 22-yard pitch in the center, where a bowler tries to hit a wicket defended by a batsman, with the goal of scoring runs by hitting the ball and running between wickets, with different formats from short T20s to five-day Test matches. Originating in England, it's now a global sport, especially dominant in Commonwealth nations, featuring elements of batting, bowling, fielding, and complex rules.");
+		elementmethods.textbox.TextEditor(
+				"teams of 11 players on a large oval field with a rectangular 22-yard pitch in the center, where a bowler tries to hit a wicket defended by a batsman, with the goal of scoring runs by hitting the ball and running between wickets, with different formats from short T20s to five-day Test matches. Originating in England, it's now a global sport, especially dominant in Commonwealth nations, featuring elements of batting, bowling, fielding, and complex rules.");
 		BaseClass.Sleep();
 		elementmethods.textbox.Toolbar("wjehfvuwvefuhwbkeufgyqwkurbkhwrferqgtewhtrh");
 	}
@@ -157,14 +162,12 @@ public class ElementTestClases {
 		elementmethods.button.FindColor();
 		BaseClass.Sleep();
 		elementmethods.button.roundedButtons();
-		
-	}//end Button
-	
+
+	}// end Button
+
 	@Test()
 	public void CheckBox() throws InterruptedException {
-		
-		
-		
+
 		BaseClass.Sleep();
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
@@ -182,14 +185,13 @@ public class ElementTestClases {
 		BaseClass.Sleep();
 		elementmethods.checkbox.SelectMulti();
 		BaseClass.Sleep();
-		elementmethods.checkbox.TriStateCheckBox();	
-		
-	}//checkbox
-	
-	
+		elementmethods.checkbox.TriStateCheckBox();
+
+	}// checkbox
+
 	@Test()
 	public void HyperLink() throws InterruptedException {
-		
+
 		BaseClass.Sleep();
 		elementmethods.elementmethod.ClickElement();
 		BaseClass.Sleep();
@@ -211,29 +213,11 @@ public class ElementTestClases {
 		BaseClass.Sleep();
 		elementmethods.hyperlink.checkAllLinkStatus(); // not required in testleaf
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//	 @AfterSuite 
-//	 public void AfterSuite() 
-//	 { 
-//		 BaseClass.stoptdriver();
-//	  }
+
+	@AfterSuite
+	public void AfterSuite() {
+		BaseClass.stoptdriver();
+		ExtentReport.tearDownReport();
+	}
 
 } // Final one

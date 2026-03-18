@@ -136,30 +136,33 @@ public class BaseClass {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         Thread.sleep(2000);
 	}// closing scrolldown
-	public static void TakeScreenshot(String fileName) {
 
-//			 String path = System.getProperty("user.dir") + "/screenShot/";
-			 
-			 String path = System.getProperty("user.dir") + File.separator + "screenShot"+File.separator;
+	
+	
+	public static String TakeScreenshot(String fileName) {
+
+		String path = System.getProperty("user.dir") + File.separator + "screenShot" + File.separator;
+		String timestamp = getCurrentDate("dd_MM_yyyy_HH_mm_ss");
+
+		String finalPath = path + fileName + "_" + timestamp + ".png";
+		try {
 
 			TakesScreenshot ts = (TakesScreenshot) driver;
-			
-			String timestamp = getCurrentDate("dd_MM_yyyy_HH_mm_ss");
-		
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			File destination = new File(path);
 
-			File Start = ts.getScreenshotAs(OutputType.FILE);
+			FileHandler.copy(source, destination);
 
-			File End = new File(path + fileName + "_" + timestamp+ ".png");
+//			// Attach screenshot to extent report
+//			ExtentReport.addScreenshot(path);
 
-			try {
-				FileHandler.copy(Start, End);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-	
+
+		return path;
+	}
+
 	//dd/MM/yyyy
 	
 	

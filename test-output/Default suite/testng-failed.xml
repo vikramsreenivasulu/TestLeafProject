@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LeafTestCases.ListTestCases">
+      <class name="LeafTestCases.HomeTestCases">
         <methods>
-          <include name="AtTestList"/>
           <include name="BeforeSuite"/>
+          <include name="AfterSuite"/>
+          <include name="Attest"/>
+          <include name="captureFailure"/>
         </methods>
-      </class> <!-- LeafTestCases.ListTestCases -->
+      </class> <!-- LeafTestCases.HomeTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
